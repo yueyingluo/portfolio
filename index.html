@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yueying Luo — AI undergraduate at Peking University." />
+    <title>Yueying Luo | AI & Agent Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <main class="layout">
+      <aside class="intro">
+        <div>
+          <p class="eyebrow" data-i18n="eyebrow">PORTFOLIO / 2026</p>
+          <h1>Yueying<br />Luo<span>.</span></h1>
+          <p class="role" data-i18n="role">AI undergraduate building reliable agent systems and applied LLM products.</p>
+          <nav aria-label="Primary navigation">
+            <a href="#about" class="active" data-i18n="navAbout">About</a>
+            <a href="#experience" data-i18n="navExperience">Experience</a>
+            <a href="#work" data-i18n="navWork">Selected work</a>
+          </nav>
+        </div>
+        <div class="intro-footer">
+          <div class="links">
+            <a href="mailto:luoyueying@stu.pku.edu.cn">Email ↗</a>
+            <a href="https://github.com/yueyingluo" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+          <button id="language-toggle" type="button" aria-label="Switch language">中文</button>
+        </div>
+      </aside>
+
+      <div class="content">
+        <section id="about" class="section about">
+          <p class="section-number">01</p>
+          <h2 data-i18n="aboutTitle">Curious about how intelligent systems become genuinely useful.</h2>
+          <div class="body-copy">
+            <p data-i18n="aboutP1">I’m a third-year undergraduate studying Artificial Intelligence at Peking University, focused on foundation models and agent systems. I enjoy turning ambiguous, real-world tasks into dependable technical products.</p>
+            <p data-i18n="aboutP2">My recent work spans multi-agent search, tool use, retrieval-augmented generation, and evaluation. I’m currently seeking software engineering, applied AI, and research internships.</p>
+          </div>
+          <div class="facts">
+            <div><span data-i18n="factSchoolLabel">EDUCATION</span><strong data-i18n="factSchool">Peking University</strong></div>
+            <div><span data-i18n="factMajorLabel">FOCUS</span><strong data-i18n="factMajor">AI · Foundation Models · Agents</strong></div>
+            <div><span data-i18n="factDateLabel">EXPECTED</span><strong data-i18n="factDate">Jun 2027</strong></div>
+          </div>
+        </section>
+
+        <section id="experience" class="section">
+          <p class="section-number">02</p>
+          <div class="section-heading"><h2 data-i18n="experienceTitle">Experience</h2><p data-i18n="experienceNote">Building systems that search, reason, and improve.</p></div>
+          <article class="timeline-item">
+            <p class="date" data-i18n="baiduDate">DEC 2025 — PRESENT</p>
+            <div>
+              <h3 data-i18n="baiduTitle">AI Strategy Intern <a href="https://www.baidu.com" target="_blank" rel="noreferrer">@ Baidu ↗</a></h3>
+              <p data-i18n="baiduBody">Developing general-purpose agent capabilities for complex information retrieval and task execution. Built a multi-agent deep-search workflow, improved query understanding and reranking, and helped automate evaluation loops for faster strategy iteration.</p>
+              <ul class="tags"><li>Multi-agent systems</li><li>LLM evaluation</li><li>Search</li><li>Python</li></ul>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <p class="date" data-i18n="pkuDate">MAR 2025 — AUG 2025</p>
+            <div>
+              <h3 data-i18n="pkuTitle">Research Intern <span>@ Peking University Law School</span></h3>
+              <p data-i18n="pkuBody">Improved legal-domain RAG generation through a two-stage SFT + reinforcement-learning approach. Built a 1,300+ document legal corpus, developed high-quality training data, and improved results on the jecqa benchmark by 5 percentage points.</p>
+              <ul class="tags"><li>RAG</li><li>Fine-tuning</li><li>FAISS</li><li>PyTorch</li></ul>
+            </div>
+          </article>
+        </section>
+
+        <section id="work" class="section work">
+          <p class="section-number">03</p>
+          <div class="section-heading"><h2 data-i18n="workTitle">Selected work</h2><p data-i18n="workNote">A closer look at systems I have helped build.</p></div>
+          <article class="project-card">
+            <div class="project-mark"><span>01</span><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="grid-lines"></div></div>
+            <div class="project-content">
+              <p class="project-kicker" data-i18n="project1Kicker">AGENT SYSTEMS · BAIDU</p>
+              <h3 data-i18n="project1Title">Multi-agent deep search for complex tasks</h3>
+              <p data-i18n="project1Body">Designed a specialized User Agent + Assistant Agent workflow that decomposes questions, chooses tools, and refines search directions across multiple turns. The system supports differentiated paths for many task intents and integrates search, finance, academic, and browser tools.</p>
+              <div class="project-results"><span data-i18n="project1Metric1">98% intent accuracy</span><span data-i18n="project1Metric2">94% resource coverage</span></div>
+            </div>
+          </article>
+          <article class="project-card reverse">
+            <div class="project-mark legal"><span>02</span><div class="doc doc-one"></div><div class="doc doc-two"></div><div class="doc doc-three"></div></div>
+            <div class="project-content">
+              <p class="project-kicker" data-i18n="project2Kicker">APPLIED RESEARCH · RAG</p>
+              <h3 data-i18n="project2Title">Legal RAG with SFT + RL training</h3>
+              <p data-i18n="project2Body">Investigated how a model can learn to cite legal provisions more reliably. I helped construct a legal knowledge base and an experimental framework to identify the contribution of retrieval, SFT, and reinforcement learning.</p>
+              <div class="project-results"><span data-i18n="project2Metric1">1,300+ legal documents</span><span data-i18n="project2Metric2">+5 pp on jecqa</span></div>
+            </div>
+          </article>
+        </section>
+        <footer><p data-i18n="footer">Designed and built by Yueying Luo. Open to internship opportunities.</p><a href="#about" aria-label="Back to top">↑</a></footer>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
