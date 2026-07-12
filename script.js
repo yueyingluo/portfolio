@@ -379,8 +379,38 @@ const diagramCopy = {
   }
 };
 
+const assistantCopy = {
+  en: {
+    launcher: 'Ask about me', title: 'Portfolio assistant', status: 'DeepSeek powered', close: 'Close assistant',
+    greeting: 'Hi — I can answer questions about Yueying’s background, project decisions, technical details, and ownership.',
+    prompts: ['Why two optimization lines at Taotian?', 'How does Baidu deep search stop?', 'Why did PPO work best?', 'What did Yueying own?'],
+    placeholder: 'Ask about Yueying or a project…', disclaimer: 'Answers are grounded in the public information on this portfolio.',
+    connecting: 'The assistant backend is being connected. Please try again shortly.',
+    error: 'I couldn’t reach the assistant just now. Please try again.', empty: 'Please enter a question.'
+  },
+  zh: {
+    launcher: '问问 AI', title: '项目 AI 助手', status: '由 DeepSeek 驱动', close: '关闭助手',
+    greeting: '你好，我可以回答关于罗玥萦的背景、项目决策、技术细节和个人负责范围的问题。',
+    prompts: ['淘天为什么拆成两条优化线？', '百度深度搜索如何终止？', '法律项目为什么选择 PPO？', '她在项目中具体负责什么？'],
+    placeholder: '询问关于我或项目的问题…', disclaimer: '回答仅基于本作品集公开信息，不包含内部或保密内容。',
+    connecting: '助手后端正在连接中，请稍后再试。',
+    error: '暂时无法连接 AI 助手，请稍后重试。', empty: '请输入一个问题。'
+  }
+};
+
 let lang = 'en';
 const toggle = document.querySelector('#language-toggle');
+const assistantRoot = document.querySelector('.ai-assistant');
+const assistantLauncher = document.querySelector('.ai-launcher');
+const assistantPanel = document.querySelector('.ai-panel');
+const assistantClose = document.querySelector('.ai-close');
+const assistantThread = document.querySelector('.ai-thread');
+const assistantPrompts = document.querySelector('.ai-prompts');
+const assistantForm = document.querySelector('.ai-form');
+const assistantInput = document.querySelector('.ai-input');
+const assistantSend = document.querySelector('.ai-send');
+const assistantMessages = [];
+let assistantBusy = false;
 
 function renderTaotianDiagram(data) {
   const lane = (label, title, steps, tone) => `
@@ -499,6 +529,117 @@ function render() {
     button.textContent = button.getAttribute('aria-expanded') === 'true' ? copy[lang].detailCloseButton : copy[lang].detailButton;
   });
   toggle.textContent = lang === 'en' ? '中文' : 'EN';
+  renderAssistantLanguage();
+}
+
+function createAssistantMessage(role, text = '', extraClass = '') {
+  const row = document.createElement('div');
+  row.className = `ai-message ${role} ${extraClass}`.trim();
+  const bubble = document.createElement('div');
+  bubble.className = 'ai-message-bubble';
+  bubble.textContent = text;
+  row.appendChild(bubble);
+  assistantThread.appendChild(row);
+  assistantThread.scrollTop = assistantThread.scrollHeight;
+  return bubble;
+}
+
+function renderAssistantLanguage() {
+  const text = assistantCopy[lang];
+  document.querySelector('.ai-launcher-label').textContent = text.launcher;
+  document.querySelector('.ai-title').textContent = text.title;
+  document.querySelector('.ai-status').innerHTML = `<i></i> ${text.status}`;
+  assistantClose.setAttribute('aria-label', text.close);
+  assistantInput.placeholder = text.placeholder;
+  document.querySelector('.ai-disclaimer').textContent = text.disclaimer;
+  const initial = assistantThread.querySelector('.ai-message.initial .ai-message-bubble');
+  if (initial && assistantMessages.length === 0) initial.textContent = text.greeting;
+  assistantPrompts.innerHTML = text.prompts.map((prompt) => `<button class="ai-prompt" type="button">${prompt}</button>`).join('');
+  assistantPrompts.querySelectorAll('.ai-prompt').forEach((button) => button.addEventListener('click', () => sendAssistantQuestion(button.textContent)));
+}
+
+function setAssistantOpen(open) {
+  assistantPanel.classList.toggle('open', open);
+  assistantPanel.setAttribute('aria-hidden', String(!open));
+  assistantLauncher.setAttribute('aria-expanded', String(open));
+  if (open) setTimeout(() => assistantInput.focus(), 180);
+}
+
+function setAssistantBusy(busy) {
+  assistantBusy = busy;
+  assistantSend.disabled = busy;
+  assistantInput.disabled = busy;
+}
+
+async function sendAssistantQuestion(rawQuestion) {
+  const text = assistantCopy[lang];
+  const question = rawQuestion.trim();
+  if (!question || assistantBusy) return;
+  setAssistantOpen(true);
+  createAssistantMessage('user', question);
+  assistantMessages.push({role:'user', content:question});
+  assistantInput.value = '';
+  assistantInput.style.height = 'auto';
+  setAssistantBusy(true);
+
+  const answerBubble = createAssistantMessage('assistant', '');
+  answerBubble.innerHTML = '<span class="ai-typing"><i></i><i></i><i></i></span>';
+  const endpoint = assistantRoot.dataset.endpoint;
+  if (!endpoint) {
+    answerBubble.textContent = text.connecting;
+    answerBubble.parentElement.classList.add('error');
+    setAssistantBusy(false);
+    return;
+  }
+
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({lang, messages:assistantMessages.slice(-8)})
+    });
+    if (!response.ok || !response.body) {
+      const detail = await response.json().catch(() => ({}));
+      throw new Error(detail.error || `HTTP ${response.status}`);
+    }
+
+    answerBubble.textContent = '';
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    let answer = '';
+    while (true) {
+      const {done, value} = await reader.read();
+      buffer += decoder.decode(value || new Uint8Array(), {stream:!done}).replace(/\r\n/g, '\n');
+      const events = buffer.split('\n\n');
+      buffer = events.pop() || '';
+      for (const event of events) {
+        const dataLine = event.split('\n').find((line) => line.startsWith('data:'));
+        if (!dataLine) continue;
+        const payload = dataLine.slice(5).trim();
+        if (!payload || payload === '[DONE]') continue;
+        const chunk = JSON.parse(payload);
+        const delta = chunk.choices?.[0]?.delta?.content || '';
+        if (delta) {
+          answer += delta;
+          answerBubble.textContent = answer;
+          assistantThread.scrollTop = assistantThread.scrollHeight;
+        }
+      }
+      if (done) break;
+    }
+    if (!answer) throw new Error('Empty response');
+    const cleanAnswer = answer.replace(/\*\*/g, '').replace(/`([^`]+)`/g, '$1').replace(/^#{1,6}\s+/gm, '');
+    answerBubble.textContent = cleanAnswer;
+    assistantMessages.push({role:'assistant', content:cleanAnswer});
+  } catch (error) {
+    console.error('Portfolio assistant error:', error);
+    answerBubble.textContent = text.error;
+    answerBubble.parentElement.classList.add('error');
+  } finally {
+    setAssistantBusy(false);
+    assistantInput.focus();
+  }
 }
 
 toggle.addEventListener('click', () => {
@@ -519,5 +660,23 @@ document.querySelectorAll('.project-toggle').forEach((button) => {
     if (open) requestAnimationFrame(() => detail.scrollIntoView({behavior:'smooth', block:'start'}));
   });
 });
+
+assistantLauncher.addEventListener('click', () => setAssistantOpen(true));
+assistantClose.addEventListener('click', () => setAssistantOpen(false));
+assistantForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  sendAssistantQuestion(assistantInput.value);
+});
+assistantInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' && !event.shiftKey) {
+    event.preventDefault();
+    assistantForm.requestSubmit();
+  }
+});
+assistantInput.addEventListener('input', () => {
+  assistantInput.style.height = 'auto';
+  assistantInput.style.height = `${Math.min(assistantInput.scrollHeight, 96)}px`;
+});
+createAssistantMessage('assistant', assistantCopy[lang].greeting, 'initial');
 
 render();

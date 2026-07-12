@@ -1,0 +1,12 @@
+{
+  "name": "yueying-portfolio-assistant-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.68.0"
+  }
+}

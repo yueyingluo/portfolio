@@ -1,0 +1,10 @@
+name = "yueying-portfolio-assistant"
+main = "src/index.js"
+compatibility_date = "2026-07-12"
+
+[vars]
+ALLOWED_ORIGIN = "https://yueyingluo.github.io"
+DEEPSEEK_MODEL = "deepseek-v4-flash"
+
+# Configure DEEPSEEK_API_KEY as an encrypted Worker secret.
+# Never place the key in this file or in frontend code.

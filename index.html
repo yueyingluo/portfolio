@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260712-interview-diagrams-v1" />
+    <link rel="stylesheet" href="style.css?v=20260712-ai-assistant-v2" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -121,6 +121,29 @@
         <footer><p data-i18n="footer">Designed and built by Yueying Luo. Open to applied LLM and agent opportunities.</p><a href="#about" aria-label="Back to top">↑</a></footer>
       </div>
     </main>
-    <script src="script.js?v=20260712-interview-diagrams-v1"></script>
+
+    <aside class="ai-assistant" data-endpoint="https://yueying-portfolio-assistant.laurenluo05.workers.dev/chat" aria-label="Portfolio AI assistant">
+      <button class="ai-launcher" type="button" aria-expanded="false" aria-controls="ai-panel">
+        <span class="ai-launcher-pulse" aria-hidden="true"></span>
+        <span class="ai-launcher-mark" aria-hidden="true">AI</span>
+        <span class="ai-launcher-label">Ask about me</span>
+      </button>
+
+      <section class="ai-panel" id="ai-panel" aria-hidden="true">
+        <header class="ai-panel-header">
+          <div class="ai-identity"><span class="ai-avatar">AI</span><div><strong class="ai-title">Portfolio assistant</strong><span class="ai-status"><i></i> DeepSeek powered</span></div></div>
+          <button class="ai-close" type="button" aria-label="Close assistant">×</button>
+        </header>
+        <div class="ai-thread" role="log" aria-live="polite"></div>
+        <div class="ai-prompts" aria-label="Suggested questions"></div>
+        <form class="ai-form">
+          <textarea class="ai-input" rows="1" maxlength="600" placeholder="Ask about Yueying or a project…" aria-label="Ask the portfolio assistant"></textarea>
+          <button class="ai-send" type="submit" aria-label="Send question"><span>↑</span></button>
+        </form>
+        <p class="ai-disclaimer">Answers are grounded in the public information on this portfolio.</p>
+      </section>
+    </aside>
+
+    <script src="script.js?v=20260712-ai-assistant-v2"></script>
   </body>
 </html>
