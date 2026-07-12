@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Yueying Luo — AI undergraduate at Peking University." />
+    <meta name="description" content="Yueying Luo — AI undergraduate building agent systems, AI search, and active-retrieval models." />
     <title>Yueying Luo | AI & Agent Systems</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260712-projects-v2" />
+    <link rel="stylesheet" href="style.css?v=20260712-deep-dive-v1" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -40,7 +40,7 @@
           <h2 data-i18n="aboutTitle">Curious about how intelligent systems become genuinely useful.</h2>
           <div class="body-copy">
             <p data-i18n="aboutP1">I’m a third-year undergraduate studying Artificial Intelligence at Peking University, focused on foundation models and agent systems. I enjoy turning ambiguous, real-world tasks into dependable technical products.</p>
-            <p data-i18n="aboutP2">My recent work spans multi-agent search, tool use, retrieval-augmented generation, and evaluation. I’m currently seeking software engineering, applied AI, and research internships.</p>
+            <p data-i18n="aboutP2">My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm internships.</p>
           </div>
           <div class="facts">
             <div><span data-i18n="factSchoolLabel">EDUCATION</span><strong data-i18n="factSchool">Peking University</strong></div>
@@ -56,77 +56,71 @@
             <p class="date" data-i18n="taotianDate">JUN 2026 — PRESENT</p>
             <div>
               <h3 data-i18n="taotianTitle">Intelligent Service Algorithms <span>@ Taotian Group</span></h3>
-              <p data-i18n="taotianBody">Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence, using two evaluators and rewards to improve both user outcomes and operational guardrails.</p>
-              <ul class="tags"><li>Agent evolution</li><li>LLM evaluation</li><li>Reward design</li><li>Python</li></ul>
+              <p data-i18n="taotianBody">Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence.</p>
+              <ul class="tags" data-i18n="taotianTags"><li>Agent evolution</li><li>LLM evaluation</li><li>Reward design</li><li>Python</li></ul>
             </div>
           </article>
           <article class="timeline-item">
             <p class="date" data-i18n="baiduDate">DEC 2025 — MAY 2026</p>
             <div>
               <h3 data-i18n="baiduTitle">AI Strategy Intern <a href="https://baike.baidu.com/item/GenFlow/66327629" target="_blank" rel="noreferrer">@ Baidu ↗</a></h3>
-              <p data-i18n="baiduBody">Developing general-purpose agent capabilities for complex information retrieval and task execution. Built a multi-agent deep-search workflow, improved query understanding and reranking, and helped automate evaluation loops for faster strategy iteration.</p>
-              <ul class="tags"><li>Multi-agent systems</li><li>LLM evaluation</li><li>Search</li><li>Python</li></ul>
+              <p data-i18n="baiduBody">Built layered AI search capabilities through query understanding, reranking, and multi-agent deep search.</p>
+              <ul class="tags" data-i18n="baiduTags"><li>Query rewriting</li><li>Reranking</li><li>Multi-agent search</li><li>Python</li></ul>
             </div>
           </article>
           <article class="timeline-item">
             <p class="date" data-i18n="pkuDate">MAR 2025 — AUG 2025</p>
             <div>
               <h3 data-i18n="pkuTitle">Research Intern <span>@ Peking University</span></h3>
-              <p data-i18n="pkuBody">Improved legal-domain RAG generation through a two-stage SFT + reinforcement-learning approach. Built a 1,300+ document legal corpus, developed high-quality training data, and improved results on the jecqa benchmark by 5 percentage points.</p>
-              <ul class="tags"><li>RAG</li><li>Fine-tuning</li><li>FAISS</li><li>PyTorch</li></ul>
+              <p data-i18n="pkuBody">Trained a legal QA agent to interleave retrieval and reasoning through SFT + reinforcement learning.</p>
+              <ul class="tags" data-i18n="pkuTags"><li>Active retrieval</li><li>SFT + RL</li><li>ReAct</li><li>PyTorch</li></ul>
             </div>
           </article>
         </section>
 
         <section id="work" class="section work">
           <p class="section-number">03</p>
-          <div class="section-heading"><h2 data-i18n="workTitle">Selected work</h2><p data-i18n="workNote">A closer look at systems I have helped build.</p></div>
-          <article class="project-card">
+          <div class="section-heading"><h2 data-i18n="workTitle">Selected work</h2><p data-i18n="workNote">Open a project for a 15-minute technical walkthrough.</p></div>
+
+          <article class="project-card" data-project="0">
             <div class="project-mark commerce"><span>01</span><div class="commerce-node node-one"></div><div class="commerce-node node-two"></div><div class="commerce-node node-three"></div><div class="commerce-link link-one"></div><div class="commerce-link link-two"></div></div>
             <div class="project-content">
               <p class="project-kicker" data-i18n="project1Kicker">AGENT EVOLUTION · TAOTIAN</p>
               <h3 data-i18n="project1Title">A self-evolving after-sales intervention agent</h3>
               <p data-i18n="project1Body">A dual-objective feedback loop that improves service policies while making the agent more reliable at executing existing SOPs.</p>
               <div class="project-results"><span data-i18n="project1Metric1">SOP adherence: 81% → 87%</span><span data-i18n="project1Metric2">0 → 1 ownership</span></div>
-              <button class="project-toggle" type="button" aria-expanded="false" data-i18n="detailButton">View system walkthrough</button>
+              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-detail-1" data-i18n="detailButton">Explore the full case study</button>
             </div>
-            <div class="project-detail">
-              <div class="detail-flow"><span data-i18n="p1Flow1">Unresolved dispute</span><b>→</b><span data-i18n="p1Flow2">Two evaluators</span><b>→</b><span data-i18n="p1Flow3">Skill update</span><b>→</b><span data-i18n="p1Flow4">Offline evaluation</span></div>
-              <div class="detail-grid"><div><strong data-i18n="p1Detail1Title">Policy evolution</strong><p data-i18n="p1Detail1">Compare agent and final platform resolutions to identify evidence gaps, compliant alternatives, and communication improvements.</p></div><div><strong data-i18n="p1Detail2Title">Guardrail evolution</strong><p data-i18n="p1Detail2">A separate evaluator checks SOP adherence, compensation boundaries, and process constraints.</p></div><div><strong data-i18n="p1Detail3Title">My contribution</strong><p data-i18n="p1Detail3">Built data construction, dual evaluators, rewards, skill updates, and offline evaluation in Python.</p></div></div>
-            </div>
+            <div class="project-detail" id="project-detail-1" data-project-detail="0"></div>
           </article>
-          <article class="project-card reverse">
+
+          <article class="project-card reverse" data-project="1">
             <div class="project-mark"><span>02</span><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="grid-lines"></div></div>
             <div class="project-content">
               <p class="project-kicker" data-i18n="project2Kicker">AI SEARCH · BAIDU</p>
               <h3 data-i18n="project2Title">Layered AI search for direct and deep retrieval</h3>
               <p data-i18n="project2Body">A routing system combines query rewriting and reranking for fast search with multi-agent progressive search for complex tasks.</p>
               <div class="project-results"><span data-i18n="project2Metric1">79% quality rate</span><span data-i18n="project2Metric2">94% usability</span></div>
-              <button class="project-toggle" type="button" aria-expanded="false" data-i18n="detailButton">View system walkthrough</button>
+              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-detail-2" data-i18n="detailButton">Explore the full case study</button>
             </div>
-            <div class="project-detail">
-              <div class="detail-flow"><span data-i18n="p2Flow1">Intent routing</span><b>→</b><span data-i18n="p2Flow2">Direct or deep search</span><b>→</b><span data-i18n="p2Flow3">Evidence selection</span><b>→</b><span data-i18n="p2Flow4">Answer / report</span></div>
-              <div class="detail-grid"><div><strong data-i18n="p2Detail1Title">Direct search</strong><p data-i18n="p2Detail1">Fine-tuned Qwen3-8B rewrites ambiguous queries before retrieval; Qwen3-Reranker-4B selects high-value evidence within a token budget.</p></div><div><strong data-i18n="p2Detail2Title">Deep search</strong><p data-i18n="p2Detail2">A User Agent plans and judges completion. An Assistant Agent selects tools and executes task-specific search SOPs.</p></div><div><strong data-i18n="p2Detail3Title">My contribution</strong><p data-i18n="p2Detail3">Designed prompts, integrated tools, and built end-to-end evaluation for iterative search improvements.</p></div></div>
-            </div>
+            <div class="project-detail" id="project-detail-2" data-project-detail="1"></div>
           </article>
-          <article class="project-card">
+
+          <article class="project-card" data-project="2">
             <div class="project-mark legal"><span>03</span><div class="doc doc-one"></div><div class="doc doc-two"></div><div class="doc doc-three"></div></div>
             <div class="project-content">
-              <p class="project-kicker" data-i18n="project3Kicker">APPLIED RESEARCH · RAG</p>
+              <p class="project-kicker" data-i18n="project3Kicker">APPLIED RESEARCH · ACTIVE RETRIEVAL</p>
               <h3 data-i18n="project3Title">Training a legal QA agent for active retrieval</h3>
               <p data-i18n="project3Body">SFT + RL trains a Qwen2.5-7B agent to alternate between reasoning, retrieval, and answer generation over legal knowledge.</p>
               <div class="project-results"><span data-i18n="project3Metric1">1,300+ legal documents</span><span data-i18n="project3Metric2">+5 pp Accuracy</span></div>
-              <button class="project-toggle" type="button" aria-expanded="false" data-i18n="detailButton">View system walkthrough</button>
+              <button class="project-toggle" type="button" aria-expanded="false" aria-controls="project-detail-3" data-i18n="detailButton">Explore the full case study</button>
             </div>
-            <div class="project-detail">
-              <div class="detail-flow"><span data-i18n="p3Flow1">Legal question</span><b>→</b><span data-i18n="p3Flow2">Reason &amp; search</span><b>→</b><span data-i18n="p3Flow3">Read retrieved laws</span><b>→</b><span data-i18n="p3Flow4">Grounded answer</span></div>
-              <div class="detail-grid"><div><strong data-i18n="p3Detail1Title">Knowledge layer</strong><p data-i18n="p3Detail1">Built a 1,300+ civil-law corpus using Qwen3-Embedding and FAISS.</p></div><div><strong data-i18n="p3Detail2Title">Post-training</strong><p data-i18n="p3Detail2">Created ReAct SFT data and compared DPO, PPO, and GRPO under rewards for answer accuracy and valid retrieval calls.</p></div><div><strong data-i18n="p3Detail3Title">Finding</strong><p data-i18n="p3Detail3">PPO achieved the best result, improving jecqa Accuracy by 5 percentage points over baseline.</p></div></div>
-            </div>
+            <div class="project-detail" id="project-detail-3" data-project-detail="2"></div>
           </article>
         </section>
-        <footer><p data-i18n="footer">Designed and built by Yueying Luo. Open to internship opportunities.</p><a href="#about" aria-label="Back to top">↑</a></footer>
+        <footer><p data-i18n="footer">Designed and built by Yueying Luo. Open to applied LLM and agent opportunities.</p><a href="#about" aria-label="Back to top">↑</a></footer>
       </div>
     </main>
-    <script src="script.js?v=20260712-projects-v2"></script>
+    <script src="script.js?v=20260712-deep-dive-v1"></script>
   </body>
 </html>
