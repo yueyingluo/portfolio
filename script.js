@@ -400,7 +400,7 @@ const assistantCopy = {
 
 const guideCopy = {
   en: {
-    skip: 'Skip', prev: 'Previous step', next: 'Next', finish: 'Start exploring',
+    skip: 'Skip', prev: 'Previous step', next: 'Next', finish: 'Start exploring', reopen: 'Open website guide',
     steps: [
       {kicker:'WELCOME', title:'Welcome to Yueying Luo’s portfolio.', copy:'This is more than an online résumé. Get a quick sense of her background, then step into three real projects to see how ambiguous needs become practical LLM and Agent systems.'},
       {kicker:'PROJECT WALKTHROUGHS', title:'Open a project. Follow the reasoning.', copy:'Select “Explore the full case study” to move from the business problem and STAR narrative into system architecture, problem modeling, implementation choices, trade-offs, and Yueying’s ownership.'},
@@ -409,7 +409,7 @@ const guideCopy = {
     ]
   },
   zh: {
-    skip: '跳过', prev: '上一步', next: '下一步', finish: '开始浏览',
+    skip: '跳过', prev: '上一步', next: '下一步', finish: '开始浏览', reopen: '重新查看网站导览',
     steps: [
       {kicker:'欢迎', title:'欢迎来到罗玥萦的个人网站。', copy:'这里不只是一份线上简历。你可以先快速了解她的背景，再进入三个真实项目，看她如何把模糊需求建模成可落地的大模型与 Agent 系统。'},
       {kicker:'项目讲解', title:'展开项目，顺着技术决策往下看。', copy:'点击「展开完整案例」，从业务问题和 STAR 叙事进入系统架构、问题建模、实现方案、技术取舍与个人负责范围。每一层都可以直接作为面试交流的讲解线索。'},
@@ -438,6 +438,7 @@ const guideDots = [...document.querySelectorAll('.guide-dots button')];
 const guideSkip = document.querySelector('.guide-skip');
 const guidePrev = document.querySelector('.guide-prev');
 const guideNext = document.querySelector('.guide-next');
+const guideReopen = document.querySelector('.guide-reopen');
 let guideStep = 0;
 
 function renderTaotianDiagram(data) {
@@ -591,6 +592,8 @@ function renderGuideLanguage() {
   const text = guideCopy[lang];
   guideSkip.textContent = text.skip;
   guidePrev.setAttribute('aria-label', text.prev);
+  guideReopen.setAttribute('aria-label', text.reopen);
+  guideReopen.setAttribute('title', text.reopen);
   guideSlides.forEach((slide, index) => {
     slide.querySelector('.guide-kicker').textContent = text.steps[index].kicker;
     slide.querySelector('h2').textContent = text.steps[index].title;
@@ -750,6 +753,7 @@ assistantInput.addEventListener('input', () => {
   assistantInput.style.height = `${Math.min(assistantInput.scrollHeight, 96)}px`;
 });
 guideSkip.addEventListener('click', closeGuide);
+guideReopen.addEventListener('click', openGuide);
 guidePrev.addEventListener('click', () => goToGuideStep(guideStep - 1));
 guideNext.addEventListener('click', () => {
   if (guideStep === guideSlides.length - 1) closeGuide();
