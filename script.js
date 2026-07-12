@@ -619,6 +619,7 @@ function updateGuideStep() {
 function openGuide() {
   guideStep = 0;
   updateGuideStep();
+  guideOverlay.inert = false;
   guideOverlay.classList.add('open');
   guideOverlay.setAttribute('aria-hidden', 'false');
   document.body.classList.add('guide-open');
@@ -628,6 +629,7 @@ function openGuide() {
 function closeGuide() {
   guideOverlay.classList.remove('open');
   guideOverlay.setAttribute('aria-hidden', 'true');
+  guideOverlay.inert = true;
   document.body.classList.remove('guide-open');
   try { sessionStorage.setItem('portfolio-guide-seen-v1', 'true'); } catch (error) { console.warn('Guide state could not be saved', error); }
 }

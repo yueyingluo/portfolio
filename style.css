@@ -216,8 +216,8 @@ footer p { margin: 0; max-width: 400px; }
 
 /* First-visit guide */
 body.guide-open { overflow: hidden; }
-.guide-overlay { position: fixed; z-index: 80; inset: 0; display: grid; place-items: center; padding: 22px; background: rgba(17,35,31,.48); backdrop-filter: blur(10px); opacity: 0; pointer-events: none; transition: opacity .28s ease; }
-.guide-overlay.open { opacity: 1; pointer-events: auto; }
+.guide-overlay { position: fixed; z-index: 80; inset: 0; display: grid; place-items: center; padding: 22px; background: rgba(17,35,31,.48); backdrop-filter: blur(10px); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .28s ease, visibility 0s linear .28s; }
+.guide-overlay.open { opacity: 1; visibility: visible; pointer-events: auto; transition-delay: 0s; }
 .guide-card { width: min(540px, 100%); overflow: hidden; border: 1px solid rgba(255,255,255,.65); border-radius: 16px; background: #f7f8f3; box-shadow: 0 34px 100px rgba(13,34,29,.32); transform: translateY(18px) scale(.97); transition: transform .38s cubic-bezier(.2,.8,.2,1); }
 .guide-overlay.open .guide-card { transform: translateY(0) scale(1); }
 .guide-header { display: flex; align-items: center; justify-content: space-between; padding: 15px 18px 0; }
