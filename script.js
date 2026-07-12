@@ -7,13 +7,13 @@ const copy = {
     aboutP2: 'My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm internships.',
     factSchoolLabel: 'EDUCATION', factSchool: 'Peking University', factMajorLabel: 'FOCUS', factMajor: 'AI · Foundation Models · Agents', factDateLabel: 'EXPECTED', factDate: 'Jun 2027',
     experienceTitle: 'Experience', experienceNote: 'Building systems that search, reason, and improve.',
-    taotianDate: 'JUN 2026 — PRESENT', taotianTitle: 'Intelligent Service Algorithms <span>@ Taotian Group</span>', taotianBody: 'Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence.',
+    taotianDate: 'JUN 2026 — PRESENT', taotianTitle: 'Intelligent Service Algorithm Intern <span>@ Taotian Group</span>', taotianBody: 'Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence.',
     taotianTags: '<li>Agent evolution</li><li>LLM evaluation</li><li>Reward design</li><li>Python</li>',
     baiduDate: 'DEC 2025 — MAY 2026', baiduTitle: 'AI Strategy Intern <a href="https://baike.baidu.com/item/GenFlow/66327629" target="_blank" rel="noreferrer">@ Baidu ↗</a>', baiduBody: 'Built layered AI search capabilities through query understanding, reranking, and multi-agent deep search.',
     baiduTags: '<li>Query rewriting</li><li>Reranking</li><li>Multi-agent search</li><li>Python</li>',
     pkuDate: 'MAR 2025 — AUG 2025', pkuTitle: 'Research Intern <span>@ Peking University</span>', pkuBody: 'Trained a legal QA agent to interleave retrieval and reasoning through SFT + reinforcement learning.',
     pkuTags: '<li>Active retrieval</li><li>SFT + RL</li><li>ReAct</li><li>PyTorch</li>',
-    workTitle: 'Selected work', workNote: 'Open a project for a 15-minute technical walkthrough.', detailButton: 'Explore the full case study', detailCloseButton: 'Close case study',
+    workTitle: 'Selected work', workNote: 'Problem framing · architecture · implementation', detailButton: 'Explore the full case study', detailCloseButton: 'Close case study',
     project1Kicker: 'AGENT EVOLUTION · TAOTIAN', project1Title: 'A self-evolving after-sales intervention agent', project1Body: 'A dual-objective feedback loop that improves service policies while making the agent more reliable at executing existing SOPs.', project1Metric1: 'SOP adherence: 81% → 87%', project1Metric2: '0 → 1 ownership',
     project2Kicker: 'AI SEARCH · BAIDU', project2Title: 'Layered AI search for direct and deep retrieval', project2Body: 'A routing system combines query rewriting and reranking for fast search with multi-agent progressive search for complex tasks.', project2Metric1: '79% quality rate', project2Metric2: '94% usability',
     project3Kicker: 'APPLIED RESEARCH · ACTIVE RETRIEVAL', project3Title: 'Training a legal QA agent for active retrieval', project3Body: 'SFT + RL trains a Qwen2.5-7B agent to alternate between reasoning, retrieval, and answer generation over legal knowledge.', project3Metric1: '1,300+ legal documents', project3Metric2: '+5 pp Accuracy',
@@ -27,13 +27,13 @@ const copy = {
     aboutP2: '近期工作涉及 Agent 自进化、AI 搜索、主动检索与评测。我正在寻找大模型算法与 Agent 方向的实习机会。',
     factSchoolLabel: '教育经历', factSchool: '北京大学', factMajorLabel: '关注方向', factMajor: '人工智能 · 基础模型 · 智能体', factDateLabel: '预计毕业', factDate: '2027 年 6 月',
     experienceTitle: '实习与研究经历', experienceNote: '构建能够检索、推理并持续优化的系统。',
-    taotianDate: '2026 年 6 月 — 至今', taotianTitle: '智能服务算法 <span>@ 淘天集团</span>', taotianBody: '面向售后纠纷的平台介入场景，从 0 到 1 构建自进化 Agent，将服务策略优化与策略遵循优化解耦。',
+    taotianDate: '2026 年 6 月 — 至今', taotianTitle: '智能服务算法实习生 <span>@ 淘天集团</span>', taotianBody: '面向售后纠纷的平台介入场景，从 0 到 1 构建自进化 Agent，将服务策略优化与策略遵循优化解耦。',
     taotianTags: '<li>Agent 自进化</li><li>LLM 评测</li><li>Reward 设计</li><li>Python</li>',
     baiduDate: '2025 年 12 月 — 2026 年 5 月', baiduTitle: '通用智能体策略实习生 <a href="https://baike.baidu.com/item/GenFlow/66327629" target="_blank" rel="noreferrer">@ 百度 ↗</a>', baiduBody: '围绕 Query 理解、检索重排与多 Agent 深度搜索，参与构建分层 AI 搜索能力。',
     baiduTags: '<li>Query 改写</li><li>检索重排</li><li>多 Agent 搜索</li><li>Python</li>',
     pkuDate: '2025 年 3 月 — 2025 年 8 月', pkuTitle: '研究实习生 <span>@ 北京大学</span>', pkuBody: '通过 SFT + 强化学习训练模型交替完成推理与检索，提升法律问答质量。',
     pkuTags: '<li>主动检索</li><li>SFT + RL</li><li>ReAct</li><li>PyTorch</li>',
-    workTitle: '代表工作', workNote: '展开项目，进入一段完整的 15 分钟技术讲解。', detailButton: '展开完整案例', detailCloseButton: '收起案例',
+    workTitle: '代表工作', workNote: '问题建模 · 系统架构 · 技术实现', detailButton: '展开完整案例', detailCloseButton: '收起案例',
     project1Kicker: 'AGENT 自进化 · 淘天', project1Title: '面向售后平台介入的自进化 Agent', project1Body: '一套双目标反馈闭环：持续优化服务策略，同时让 Agent 更稳定地遵循既有 SOP。', project1Metric1: 'SOP 遵循率：81% → 87%', project1Metric2: '从 0 到 1 负责',
     project2Kicker: 'AI 搜索 · 百度', project2Title: '直接搜索与深度搜索协同的分层 AI 搜索', project2Body: '通过意图分流，将 Query 改写与重排用于快速搜索，并以多 Agent 渐进式搜索处理复杂任务。', project2Metric1: '优质率 79%', project2Metric2: '可用率 94%',
     project3Kicker: '应用研究 · 主动检索', project3Title: '训练具备主动检索能力的法律问答 Agent', project3Body: '基于 Qwen2.5-7B，通过 SFT + RL 训练模型在法律知识上交替完成推理、检索与回答。', project3Metric1: '1,300+ 法律文档', project3Metric2: 'Accuracy +5 pp',
@@ -44,7 +44,6 @@ const copy = {
 const projectDetails = {
   en: [
     {
-      eyebrow: '15-MINUTE WALKTHROUGH · AGENT EVOLUTION',
       headline: 'Teach the system what to improve — and what must stay constrained.',
       intro: 'The key design decision was to stop treating every dissatisfied case as the same failure. A bad outcome may come from an incomplete service policy, or from an agent failing to execute a policy that is already good enough. Those two causes need different data, evaluators, rewards, and updates.',
       star: [
@@ -79,11 +78,8 @@ const projectDetails = {
       ],
       ownershipTitle: 'My ownership',
       ownership: 'I built the project from zero to one: data construction, the two evaluators, reward design, the Skill update workflow, and offline evaluation — implemented primarily in Python.',
-      deepDiveTitle: 'Good follow-up directions',
-      deepDive: ['Evaluator calibration', 'LightGBM features & leakage', 'Reward conflict handling', 'Skill edit acceptance', 'Offline-to-online validation']
     },
     {
-      eyebrow: '15-MINUTE WALKTHROUGH · AI SEARCH',
       headline: 'Use the cheapest search path that can still finish the task.',
       intro: 'AI search has two very different workloads. Simple factual queries need low latency and high-quality evidence. Complex, multi-domain questions need decomposition, tool selection, repeated search, and an explicit stopping rule. The system routes between those paths rather than forcing one architecture onto every query.',
       star: [
@@ -118,11 +114,8 @@ const projectDetails = {
       ],
       ownershipTitle: 'My contribution',
       ownership: 'I worked on the Qwen3-8B query-rewrite training pipeline, prompt design for progressive multi-agent search, and standardized integration of domain search and browser tools.',
-      deepDiveTitle: 'Good follow-up directions',
-      deepDive: ['SFT data construction', 'Reranker truncation', 'Intent routing', 'Agent termination', 'Tool abstraction']
     },
     {
-      eyebrow: '15-MINUTE WALKTHROUGH · ACTIVE RETRIEVAL',
       headline: 'Train the model to decide when external law is necessary.',
       intro: 'Conventional RAG retrieves once before generation. Legal questions are harder: the model must recognize a knowledge gap, formulate a useful query, read the retrieved provision, and continue reasoning without losing the original task. This project trains that behavior rather than relying on prompting alone.',
       star: [
@@ -157,13 +150,10 @@ const projectDetails = {
       ],
       ownershipTitle: 'My contribution',
       ownership: 'I built the legal corpus and retrieval environment, constructed SFT data, designed the reward and ablation framework, compared post-training algorithms, and diagnosed the SFT/RL workflow mismatch.',
-      deepDiveTitle: 'Good follow-up directions',
-      deepDive: ['ReAct data format', 'Reward design', 'Why PPO won', 'SFT–RL alignment', 'Retrieval ablations']
     }
   ],
   zh: [
     {
-      eyebrow: '15 分钟技术讲解 · AGENT 自进化',
       headline: '让系统知道该优化什么，也知道什么不能被破坏。',
       intro: '最关键的设计不是“把所有不满意案例都拿来训练”，而是先判断失败来自哪里：是服务策略本身能力不足，还是策略已经足够好、但 Agent 没有正确执行。两种根因需要不同的数据、Evaluator、Reward 和更新方式。',
       star: [
@@ -198,11 +188,8 @@ const projectDetails = {
       ],
       ownershipTitle: '我的负责范围',
       ownership: '项目从 0 到 1 由我负责：数据构造、双 Evaluator、Reward 设计、Skill 更新流程和离线评测，主要使用 Python 实现。',
-      deepDiveTitle: '可以继续深挖',
-      deepDive: ['Evaluator 校准', 'LightGBM 特征与泄漏', 'Reward 冲突处理', 'Skill 更新门控', '离线到线上验证']
     },
     {
-      eyebrow: '15 分钟技术讲解 · AI 搜索',
       headline: '用能够完成任务的最轻搜索路径。',
       intro: 'AI 搜索实际包含两类负载：简单事实查询需要低延迟和高质量证据；复杂跨领域问题需要任务拆解、工具选择、多轮搜索和明确的终止判断。系统通过意图分流在两条路径之间选择，而不是让所有 Query 都进入同一套重型架构。',
       star: [
@@ -237,11 +224,8 @@ const projectDetails = {
       ],
       ownershipTitle: '我的贡献',
       ownership: '我参与 Qwen3-8B Query 改写训练，负责渐进式多 Agent 搜索的 Prompt 设计，并统一接入搜索、财经、学术与浏览器工具。',
-      deepDiveTitle: '可以继续深挖',
-      deepDive: ['SFT 数据构造', 'Rerank 截断策略', '意图分流', 'Agent 终止条件', '工具抽象层']
     },
     {
-      eyebrow: '15 分钟技术讲解 · 主动检索',
       headline: '训练模型自己判断什么时候必须查法条。',
       intro: '传统 RAG 通常在生成前检索一次，但法律问题更复杂：模型需要识别知识缺口、生成有效 Query、读取检索到的法条，并在不丢失原任务的情况下继续推理。这个项目不是只靠 Prompt，而是直接训练这种“推理—检索”交替行为。',
       star: [
@@ -276,22 +260,198 @@ const projectDetails = {
       ],
       ownershipTitle: '我的贡献',
       ownership: '我搭建法律语料与检索环境，构造 SFT 数据，设计 Reward 与消融框架，对比后训练算法，并诊断 SFT / RL 工作流不一致问题。',
-      deepDiveTitle: '可以继续深挖',
-      deepDive: ['ReAct 数据格式', 'Reward 设计', '为什么 PPO 最优', 'SFT–RL 对齐', '检索消融实验']
     }
   ]
+};
+
+const diagramCopy = {
+  en: {
+    taotian: {
+      sourceTag: 'PRODUCTION FEEDBACK', sourceTitle: 'Unresolved intervention cases', sourceText: 'Conversation · order context · agent proposal · platform resolution · satisfaction signal',
+      router: 'Root-cause attribution', routerText: 'The dual evaluators decide which part of the system should learn.',
+      policyLane: 'LINE A · POLICY CAPABILITY', policyTitle: 'Improve an insufficient strategy', policySteps: [
+        ['Compare', 'Agent proposal ↔ final platform resolution'],
+        ['Abstract', 'Evidence, flexibility, empathy, guidance and compensation dimensions'],
+        ['Score', 'Satisfaction evaluator + expected uplift reward']
+      ],
+      adherenceLane: 'LINE B · POLICY EXECUTION', adherenceTitle: 'Make the agent follow a sufficient SOP', adherenceSteps: [
+        ['Align', 'Current SOP ↔ actual agent trajectory'],
+        ['Locate', 'Missing steps, boundary violations and unsupported actions'],
+        ['Score', 'Adherence evaluator + process guardrail reward']
+      ],
+      engineTag: 'SHARED SELF-EVOLUTION ENGINE · SKILLOPT-INSPIRED', engineTitle: 'The two objectives share one controlled text-space optimizer',
+      engineContext: ['Frozen service Agent', 'Current external Skill / SOP'],
+      engineSteps: [
+        ['01 · ROLLOUT', 'Execute the current Skill and collect scored trajectories'],
+        ['02 · REFLECT', 'Analyze success and failure minibatches separately'],
+        ['03 · BOUNDED EDIT', 'Propose Add / Delete / Replace operations under an edit budget'],
+        ['04 · VALIDATE', 'Run held-out cases against target and guardrail evaluators'],
+        ['05 · SELECT', 'Accept only an improved candidate as the new best Skill']
+      ],
+      accepted: 'ACCEPTED → update current Skill', rejected: 'REJECTED → buffer as negative feedback'
+    },
+    baidu: {
+      sourceTag: 'USER QUERY', sourceTitle: 'One entry, two search depths', router: 'Intent router · 98% accuracy',
+      directLane: 'DIRECT SEARCH · LOW LATENCY', directSteps: [
+        ['01', 'Query rewrite · Qwen3-8B', 'Resolve context, ambiguity, multiple intents, time, location and user information'],
+        ['02', 'Broad retrieval · Volcano Engine', 'Use the rewritten Query to retrieve high-recall candidates'],
+        ['03', 'Rerank · Qwen3-Reranker-4B', 'Score each Query–Document pair by relevance'],
+        ['04', 'Evidence budget', 'Apply thresholds and Top-token budget before generation']
+      ],
+      deepLane: 'DEEP SEARCH · PROGRESSIVE', sop: 'Task-specific SOP · must-have evidence · stop conditions',
+      userAgent: 'User Agent', userText: 'Decompose · plan · read results · judge completion',
+      assistantAgent: 'Assistant Agent', assistantText: 'Select tools · execute actions · normalize observations',
+      tools: ['Web search', 'Finance', 'Academic', 'Page reader', 'Browser'],
+      loop: 'Observations return to the User Agent. Continue until task criteria are met or the maximum-turn guardrail fires.',
+      output: 'Grounded answer / structured report'
+    },
+    legal: {
+      setupTag: 'ENVIRONMENT', setupTitle: 'Legal search environment', setupText: '1,300+ civil-law documents · Qwen3-Embedding · FAISS retriever',
+      sftTag: 'STAGE 1 · SFT WARM START', sftTitle: 'Teach a stable ReAct protocol', sftText: 'Question → reasoning → valid search call → retrieved observation → continued reasoning → answer',
+      rlTag: 'STAGE 2 · SEARCH-R1-STYLE PPO', rlTitle: 'Optimize multi-turn reasoning–search trajectories',
+      rlSteps: [
+        ['01 · POLICY', 'Qwen2.5-7B samples a reasoning trajectory'],
+        ['02 · SEARCH ACTION', 'Emit a formatted Query when external law is needed'],
+        ['03 · ENVIRONMENT', 'FAISS returns legal provisions as an Observation'],
+        ['04 · CONTINUE', 'Interleave reasoning and search until the final answer'],
+        ['05 · REWARD', 'Answer correctness + valid retrieval-format reward'],
+        ['06 · PPO UPDATE', 'Optimize generated tokens with a value baseline and KL control']
+      ],
+      mask: 'Retrieved Observation tokens are context, not model actions → mask them from the policy loss', feedback: 'PPO gradients update the policy after each rollout batch',
+      compare: 'DPO / GRPO / PPO compared · PPO selected by Accuracy', output: 'Best policy → +5 pp jecqa Accuracy'
+    }
+  },
+  zh: {
+    taotian: {
+      sourceTag: '线上反馈', sourceTitle: '平台介入后仍未解决的案例', sourceText: '对话 · 订单上下文 · Agent 方案 · 平台最终方案 · 满意度信号',
+      router: '根因诊断分流', routerText: '双 Evaluator 先判断究竟应该让系统的哪一部分学习。',
+      policyLane: '优化线 A · 策略能力', policyTitle: '优化本身不够好的服务策略', policySteps: [
+        ['方案对比', 'Agent 方案 ↔ 平台最终解决方案'],
+        ['维度抽象', '证据、合规变通、共情、引导与赔付合理性'],
+        ['效果评分', '满意率 Evaluator + 预期增益 Reward']
+      ],
+      adherenceLane: '优化线 B · 策略执行', adherenceTitle: '让 Agent 遵循已经足够好的 SOP', adherenceSteps: [
+        ['轨迹对齐', '当前 SOP ↔ Agent 实际执行轨迹'],
+        ['偏差定位', '缺失步骤、边界违规与无依据动作'],
+        ['遵循评分', 'SOP Evaluator + 流程护栏 Reward']
+      ],
+      engineTag: '共享自进化引擎 · 参考 SKILLOPT', engineTitle: '两个目标共用一套受控的文本空间优化器',
+      engineContext: ['冻结的服务 Agent', '当前外部 Skill / SOP'],
+      engineSteps: [
+        ['01 · ROLLOUT', '执行当前 Skill，收集带评分的完整轨迹'],
+        ['02 · REFLECT', '将成功与失败 Minibatch 分开反思'],
+        ['03 · 有界编辑', '在编辑预算内提出 Add / Delete / Replace'],
+        ['04 · 留出集验证', '同时通过目标 Evaluator 与护栏 Evaluator'],
+        ['05 · 选择', '只有优于当前版本的 Candidate 才成为新 Skill']
+      ],
+      accepted: '接受 → 更新当前 Skill', rejected: '拒绝 → 进入 Buffer，作为后续负反馈'
+    },
+    baidu: {
+      sourceTag: '用户 QUERY', sourceTitle: '统一入口，两种搜索深度', router: '意图分流 · 准确率 98%',
+      directLane: '直接搜索 · 低延迟路径', directSteps: [
+        ['01', 'Query 改写 · Qwen3-8B', '补全上下文、消歧、拆分多意图，加入时间、地点和用户信息'],
+        ['02', '高召回检索 · 火山引擎', '使用改写 Query 获取覆盖更广的候选文档'],
+        ['03', '相关性重排 · Qwen3-Reranker-4B', '对每个 Query–Document Pair 进行相关度打分'],
+        ['04', '证据预算', '结合阈值与 Top-token 预算组织下游上下文']
+      ],
+      deepLane: '深度搜索 · 渐进式路径', sop: '任务特定 SOP · 必达信息 · 终止条件',
+      userAgent: 'User Agent', userText: '任务拆解 · 搜索规划 · 读取结果 · 完成度判断',
+      assistantAgent: 'Assistant Agent', assistantText: '工具选择 · 执行动作 · 统一 Observation',
+      tools: ['通用搜索', '财经', '学术', '网页读取', '浏览器'],
+      loop: 'Observation 返回 User Agent；未满足任务条件则继续搜索，满足条件或达到最大轮数后结束。',
+      output: '有证据的回答 / 结构化报告'
+    },
+    legal: {
+      setupTag: '检索环境', setupTitle: '法律检索环境', setupText: '1,300+ 民法文档 · Qwen3-Embedding · FAISS Retriever',
+      sftTag: '阶段 1 · SFT 冷启动', sftTitle: '先教会稳定的 ReAct 交互协议', sftText: '问题 → 推理 → 合法 Search Call → 检索 Observation → 继续推理 → 回答',
+      rlTag: '阶段 2 · SEARCH-R1 式 PPO', rlTitle: '优化多轮推理—检索交替轨迹',
+      rlSteps: [
+        ['01 · POLICY', 'Qwen2.5-7B 采样一条推理轨迹'],
+        ['02 · SEARCH ACTION', '需要外部法条时生成格式正确的 Query'],
+        ['03 · ENVIRONMENT', 'FAISS 将相关法条作为 Observation 返回'],
+        ['04 · 继续推理', '推理与检索交替，直到生成最终答案'],
+        ['05 · REWARD', '最终答案正确性 + 检索格式正确奖励'],
+        ['06 · PPO UPDATE', '结合 Value Baseline 与 KL 约束更新生成 Token']
+      ],
+      mask: '检索到的 Observation 是环境上下文，不是模型动作 → 在 Policy Loss 中 Mask', feedback: '每个 Rollout Batch 后，PPO 梯度回传并更新 Policy',
+      compare: 'DPO / GRPO / PPO 对比 · 按 Accuracy 选择 PPO', output: '最优 Policy → jecqa Accuracy +5 pp'
+    }
+  }
 };
 
 let lang = 'en';
 const toggle = document.querySelector('#language-toggle');
 
+function renderTaotianDiagram(data) {
+  const lane = (label, title, steps, tone) => `
+    <article class="optimization-lane lane-${tone}">
+      <p class="diagram-kicker">${label}</p><h5>${title}</h5>
+      <div class="lane-steps">${steps.map(([name, text]) => `<div class="lane-step"><strong>${name}</strong><span>${text}</span></div>`).join('')}</div>
+    </article>`;
+  return `<div class="technical-diagram taotian-diagram">
+    <div class="diagram-entry"><p>${data.sourceTag}</p><h5>${data.sourceTitle}</h5><span>${data.sourceText}</span></div>
+    <div class="diagram-arrow vertical">↓</div>
+    <div class="diagram-router"><strong>${data.router}</strong><span>${data.routerText}</span></div>
+    <div class="branch-rail"><span>↙</span><span>↘</span></div>
+    <div class="optimization-lanes">
+      ${lane(data.policyLane, data.policyTitle, data.policySteps, 'green')}
+      ${lane(data.adherenceLane, data.adherenceTitle, data.adherenceSteps, 'blue')}
+    </div>
+    <div class="merge-rail"><span>↘</span><span>↙</span></div>
+    <section class="shared-engine">
+      <div class="engine-heading"><div><p>${data.engineTag}</p><h5>${data.engineTitle}</h5></div><div class="engine-context">${data.engineContext.map((item) => `<span>${item}</span>`).join('')}</div></div>
+      <div class="engine-steps">${data.engineSteps.map(([tag, text], index) => `<article><p>${tag}</p><span>${text}</span>${index < data.engineSteps.length - 1 ? '<i>→</i>' : ''}</article>`).join('')}</div>
+      <div class="engine-outcomes"><span class="accepted">✓ ${data.accepted}</span><span class="rejected">↺ ${data.rejected}</span></div>
+    </section>
+  </div>`;
+}
+
+function renderBaiduDiagram(data) {
+  const directSteps = data.directSteps.map(([number, title, text], index) => `<article class="search-step"><span>${number}</span><h5>${title}</h5><p>${text}</p>${index < data.directSteps.length - 1 ? '<i>→</i>' : ''}</article>`).join('');
+  return `<div class="technical-diagram baidu-diagram">
+    <div class="diagram-entry compact"><p>${data.sourceTag}</p><h5>${data.sourceTitle}</h5></div>
+    <div class="diagram-arrow vertical">↓</div><div class="diagram-router search-router"><strong>${data.router}</strong></div>
+    <div class="branch-rail"><span>↙</span><span>↘</span></div>
+    <div class="search-lanes">
+      <section class="search-lane direct-lane"><p class="diagram-kicker">${data.directLane}</p><div class="direct-pipeline">${directSteps}</div></section>
+      <section class="search-lane deep-lane"><p class="diagram-kicker">${data.deepLane}</p>
+        <div class="sop-strip">${data.sop}</div>
+        <div class="agent-loop"><article><span>PLANNER</span><h5>${data.userAgent}</h5><p>${data.userText}</p></article><div class="loop-arrows">⇄</div><article><span>EXECUTOR</span><h5>${data.assistantAgent}</h5><p>${data.assistantText}</p></article></div>
+        <div class="tool-row">${data.tools.map((tool) => `<span>${tool}</span>`).join('')}</div><p class="loop-note">↺ ${data.loop}</p>
+      </section>
+    </div>
+    <div class="search-output"><span>↓</span><strong>${data.output}</strong></div>
+  </div>`;
+}
+
+function renderLegalDiagram(data) {
+  return `<div class="technical-diagram legal-diagram">
+    <div class="training-stage setup-stage"><p>${data.setupTag}</p><h5>${data.setupTitle}</h5><span>${data.setupText}</span></div>
+    <div class="diagram-arrow vertical">↓</div>
+    <div class="training-stage sft-stage"><p>${data.sftTag}</p><h5>${data.sftTitle}</h5><span>${data.sftText}</span></div>
+    <div class="diagram-arrow vertical">↓</div>
+    <section class="rl-stage"><div class="rl-heading"><p>${data.rlTag}</p><h5>${data.rlTitle}</h5></div>
+      <div class="rl-loop">${data.rlSteps.map(([tag, text], index) => `<article><p>${tag}</p><span>${text}</span>${index < data.rlSteps.length - 1 ? '<i>→</i>' : ''}</article>`).join('')}</div>
+      <div class="loss-mask">◫ ${data.mask}</div><div class="ppo-feedback">↖ ${data.feedback}</div>
+    </section>
+    <div class="training-output"><span>${data.compare}</span><strong>${data.output}</strong></div>
+  </div>`;
+}
+
+function renderArchitecture(projectIndex) {
+  const diagrams = diagramCopy[lang];
+  if (projectIndex === 0) return renderTaotianDiagram(diagrams.taotian);
+  if (projectIndex === 1) return renderBaiduDiagram(diagrams.baidu);
+  return renderLegalDiagram(diagrams.legal);
+}
+
 function renderProjectDetails() {
   document.querySelectorAll('[data-project-detail]').forEach((container) => {
-    const project = projectDetails[lang][Number(container.dataset.projectDetail)];
+    const projectIndex = Number(container.dataset.projectDetail);
+    const project = projectDetails[lang][projectIndex];
     container.innerHTML = `
       <div class="case-study">
         <header class="case-header">
-          <p class="case-eyebrow">${project.eyebrow}</p>
           <h4>${project.headline}</h4>
           <p>${project.intro}</p>
         </header>
@@ -305,9 +465,7 @@ function renderProjectDetails() {
 
         <section class="story-section">
           <div class="story-label"><span>02</span><strong>${project.architectureTitle}</strong></div>
-          <div class="system-map">
-            ${project.nodes.map((node, index) => `<article class="flow-node tone-${node.tone}"><span>${node.tag}</span><h5>${node.title}</h5><p>${node.text}</p>${index < project.nodes.length - 1 ? '<i aria-hidden="true">→</i>' : ''}</article>`).join('')}
-          </div>
+          ${renderArchitecture(projectIndex)}
           <p class="architecture-note">${project.architectureNote}</p>
         </section>
 
@@ -327,7 +485,6 @@ function renderProjectDetails() {
 
         <section class="ownership-panel">
           <div><p>${project.ownershipTitle}</p><h5>${project.ownership}</h5></div>
-          <div><p>${project.deepDiveTitle}</p><ul>${project.deepDive.map((item) => `<li>${item}</li>`).join('')}</ul></div>
         </section>
       </div>`;
   });
