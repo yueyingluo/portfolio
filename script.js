@@ -1,10 +1,10 @@
 const copy = {
   en: {
-    name: 'Yueying<br />Luo<span>.</span>', phoneLink: 'Phone / WeChat · 18028356417', eyebrow: 'PORTFOLIO / 2026',
+    name: 'Yueying<br />Luo<span>.</span>', phoneLink: 'Phone / WeChat · 18028356417', eyebrow: 'PORTFOLIO / 2026', contactInvite: 'If you are looking for a thoughtful builder, have an opportunity worth exploring, or simply want to exchange ideas on LLMs and agents — I would love to hear from you.',
     role: 'AI undergraduate building reliable agent systems and applied LLM products.', navAbout: 'About', navExperience: 'Experience', navWork: 'Selected work',
     aboutTitle: 'Curious about how intelligent systems become genuinely useful.',
     aboutP1: 'I’m a third-year undergraduate studying Artificial Intelligence at Peking University, focused on foundation models and agent systems. I enjoy turning ambiguous, real-world tasks into dependable technical products.',
-    aboutP2: 'My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm internships.',
+    aboutP2: 'My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm opportunities.',
     factSchoolLabel: 'EDUCATION', factSchool: 'Peking University', factMajorLabel: 'FOCUS', factMajor: 'AI · Foundation Models · Agents', factDateLabel: 'EXPECTED', factDate: 'Jun 2027',
     experienceTitle: 'Experience', experienceNote: 'Building systems that search, reason, and improve.',
     taotianDate: 'JUN 2026 — PRESENT', taotianTitle: 'Intelligent Service Algorithm Intern <span>@ Taotian Group</span>', taotianBody: 'Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence.',
@@ -20,11 +20,11 @@ const copy = {
     footer: 'Designed and built by Yueying Luo. Open to applied LLM and agent opportunities.'
   },
   zh: {
-    name: '罗玥萦<span>.</span>', phoneLink: '手机 / 微信 · 18028356417', eyebrow: '个人作品集 / 2026',
+    name: '罗玥萦<span>.</span>', phoneLink: '手机 / 微信 · 18028356417', eyebrow: '个人作品集 / 2026', contactInvite: '如果你正在寻找认真又有创造力的技术伙伴、手里有一个值得投入的机会，或者只是想聊聊大模型与 Agent，欢迎来找我交换想法。',
     role: '北京大学人工智能本科生，专注于智能体系统与大模型算法。', navAbout: '关于我', navExperience: '经历', navWork: '代表工作',
     aboutTitle: '我关心智能系统如何真正解决现实问题。',
     aboutP1: '我是北京大学人工智能专业本科三年级学生，关注基础模型、智能体系统与后训练。我喜欢把模糊的真实需求转化为可靠、可落地的技术产品。',
-    aboutP2: '近期工作涉及 Agent 自进化、AI 搜索、主动检索与评测。我正在寻找大模型算法与 Agent 方向的实习机会。',
+    aboutP2: '近期工作涉及 Agent 自进化、AI 搜索、主动检索与评测。我正在寻找大模型算法与 Agent 方向的工作机会。',
     factSchoolLabel: '教育经历', factSchool: '北京大学', factMajorLabel: '关注方向', factMajor: '人工智能 · 基础模型 · 智能体', factDateLabel: '预计毕业', factDate: '2027 年 6 月',
     experienceTitle: '实习与研究经历', experienceNote: '构建能够检索、推理并持续优化的系统。',
     taotianDate: '2026 年 6 月 — 至今', taotianTitle: '智能服务算法实习生 <span>@ 淘天集团</span>', taotianBody: '面向售后纠纷的平台介入场景，从 0 到 1 构建自进化 Agent，将服务策略优化与策略遵循优化解耦。',
@@ -398,6 +398,27 @@ const assistantCopy = {
   }
 };
 
+const guideCopy = {
+  en: {
+    skip: 'Skip', prev: 'Previous step', next: 'Next', finish: 'Start exploring',
+    steps: [
+      {kicker:'WELCOME', title:'Welcome to Yueying Luo’s portfolio.', copy:'This is more than an online résumé. Get a quick sense of her background, then step into three real projects to see how ambiguous needs become practical LLM and Agent systems.'},
+      {kicker:'PROJECT WALKTHROUGHS', title:'Open a project. Follow the reasoning.', copy:'Select “Explore the full case study” to move from the business problem and STAR narrative into system architecture, problem modeling, implementation choices, trade-offs, and Yueying’s ownership.'},
+      {kicker:'ASK THE PORTFOLIO', title:'Let the AI assistant take your follow-up.', copy:'Use the AI button in the lower-right corner to ask about technical decisions, results, or responsibilities. Answers are grounded in the public project material and powered by DeepSeek.'},
+      {kicker:'LET’S CONNECT', title:'Good ideas are better when they travel.', copy:'If you are looking for a thoughtful builder, have an opportunity worth exploring, or want to exchange ideas on LLMs and agents, Yueying would be genuinely glad to continue the conversation.'}
+    ]
+  },
+  zh: {
+    skip: '跳过', prev: '上一步', next: '下一步', finish: '开始浏览',
+    steps: [
+      {kicker:'欢迎', title:'欢迎来到罗玥萦的个人网站。', copy:'这里不只是一份线上简历。你可以先快速了解她的背景，再进入三个真实项目，看她如何把模糊需求建模成可落地的大模型与 Agent 系统。'},
+      {kicker:'项目讲解', title:'展开项目，顺着技术决策往下看。', copy:'点击「展开完整案例」，从业务问题和 STAR 叙事进入系统架构、问题建模、实现方案、技术取舍与个人负责范围。每一层都可以直接作为面试交流的讲解线索。'},
+      {kicker:'随时追问', title:'把你的问题交给 AI 助手。', copy:'点击右下角的「问问 AI」，可以继续追问技术决策、项目结果或个人贡献。回答由 DeepSeek 驱动，并严格基于网站公开的项目资料。'},
+      {kicker:'保持联系', title:'期待和你继续交流。', copy:'如果你正在寻找认真又有创造力的技术伙伴、手里有一个值得投入的机会，或者想聊聊大模型与 Agent，罗玥萦会很高兴和你交换想法。'}
+    ]
+  }
+};
+
 let lang = 'en';
 const toggle = document.querySelector('#language-toggle');
 const assistantRoot = document.querySelector('.ai-assistant');
@@ -411,6 +432,13 @@ const assistantInput = document.querySelector('.ai-input');
 const assistantSend = document.querySelector('.ai-send');
 const assistantMessages = [];
 let assistantBusy = false;
+const guideOverlay = document.querySelector('.guide-overlay');
+const guideSlides = [...document.querySelectorAll('.guide-slide')];
+const guideDots = [...document.querySelectorAll('.guide-dots button')];
+const guideSkip = document.querySelector('.guide-skip');
+const guidePrev = document.querySelector('.guide-prev');
+const guideNext = document.querySelector('.guide-next');
+let guideStep = 0;
 
 function renderTaotianDiagram(data) {
   const lane = (label, title, steps, tone) => `
@@ -530,6 +558,7 @@ function render() {
   });
   toggle.textContent = lang === 'en' ? '中文' : 'EN';
   renderAssistantLanguage();
+  renderGuideLanguage();
 }
 
 function createAssistantMessage(role, text = '', extraClass = '') {
@@ -556,6 +585,49 @@ function renderAssistantLanguage() {
   if (initial && assistantMessages.length === 0) initial.textContent = text.greeting;
   assistantPrompts.innerHTML = text.prompts.map((prompt) => `<button class="ai-prompt" type="button">${prompt}</button>`).join('');
   assistantPrompts.querySelectorAll('.ai-prompt').forEach((button) => button.addEventListener('click', () => sendAssistantQuestion(button.textContent)));
+}
+
+function renderGuideLanguage() {
+  const text = guideCopy[lang];
+  guideSkip.textContent = text.skip;
+  guidePrev.setAttribute('aria-label', text.prev);
+  guideSlides.forEach((slide, index) => {
+    slide.querySelector('.guide-kicker').textContent = text.steps[index].kicker;
+    slide.querySelector('h2').textContent = text.steps[index].title;
+    slide.querySelector('.guide-copy').textContent = text.steps[index].copy;
+    guideDots[index].setAttribute('aria-label', `${lang === 'zh' ? '第' : 'Step '}${index + 1}${lang === 'zh' ? '步' : ''}`);
+  });
+  updateGuideStep();
+}
+
+function updateGuideStep() {
+  const text = guideCopy[lang];
+  guideSlides.forEach((slide, index) => slide.classList.toggle('active', index === guideStep));
+  guideDots.forEach((dot, index) => dot.classList.toggle('active', index === guideStep));
+  document.querySelector('.guide-counter').textContent = `${guideStep + 1} / ${guideSlides.length}`;
+  guidePrev.disabled = guideStep === 0;
+  guideNext.innerHTML = guideStep === guideSlides.length - 1 ? `${text.finish} <span>↗</span>` : `${text.next} <span>→</span>`;
+}
+
+function openGuide() {
+  guideStep = 0;
+  updateGuideStep();
+  guideOverlay.classList.add('open');
+  guideOverlay.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('guide-open');
+  setTimeout(() => guideSkip.focus(), 180);
+}
+
+function closeGuide() {
+  guideOverlay.classList.remove('open');
+  guideOverlay.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('guide-open');
+  try { sessionStorage.setItem('portfolio-guide-seen-v1', 'true'); } catch (error) { console.warn('Guide state could not be saved', error); }
+}
+
+function goToGuideStep(nextStep) {
+  guideStep = Math.max(0, Math.min(guideSlides.length - 1, nextStep));
+  updateGuideStep();
 }
 
 function setAssistantOpen(open) {
@@ -677,6 +749,24 @@ assistantInput.addEventListener('input', () => {
   assistantInput.style.height = 'auto';
   assistantInput.style.height = `${Math.min(assistantInput.scrollHeight, 96)}px`;
 });
+guideSkip.addEventListener('click', closeGuide);
+guidePrev.addEventListener('click', () => goToGuideStep(guideStep - 1));
+guideNext.addEventListener('click', () => {
+  if (guideStep === guideSlides.length - 1) closeGuide();
+  else goToGuideStep(guideStep + 1);
+});
+guideDots.forEach((dot, index) => dot.addEventListener('click', () => goToGuideStep(index)));
+guideOverlay.addEventListener('click', (event) => { if (event.target === guideOverlay) closeGuide(); });
+document.addEventListener('keydown', (event) => {
+  if (!guideOverlay.classList.contains('open')) return;
+  if (event.key === 'Escape') closeGuide();
+  if (event.key === 'ArrowRight') goToGuideStep(guideStep + 1);
+  if (event.key === 'ArrowLeft') goToGuideStep(guideStep - 1);
+});
 createAssistantMessage('assistant', assistantCopy[lang].greeting, 'initial');
 
 render();
+const forceGuide = new URLSearchParams(window.location.search).get('guide') === '1';
+let guideSeen = false;
+try { guideSeen = sessionStorage.getItem('portfolio-guide-seen-v1') === 'true'; } catch (error) { console.warn('Guide state could not be read', error); }
+if (forceGuide || !guideSeen) setTimeout(openGuide, 500);

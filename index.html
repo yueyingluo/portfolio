@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20260712-ai-assistant-v2" />
+    <link rel="stylesheet" href="style.css?v=20260712-guided-portfolio-v1" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -25,10 +25,13 @@
           </nav>
         </div>
         <div class="intro-footer">
-          <div class="links">
-            <a href="mailto:luoyueying@stu.pku.edu.cn">Email ↗</a>
-            <a href="https://github.com/yueyingluo" target="_blank" rel="noreferrer">GitHub ↗</a>
-            <a href="tel:+8618028356417" data-i18n="phoneLink">Phone / WeChat · 18028356417</a>
+          <div class="contact-block">
+            <p class="contact-invite" data-i18n="contactInvite">If you are looking for a thoughtful builder, have an opportunity worth exploring, or simply want to exchange ideas on LLMs and agents — I would love to hear from you.</p>
+            <div class="links">
+              <a href="mailto:luoyueying@stu.pku.edu.cn">Email ↗</a>
+              <a href="https://github.com/yueyingluo" target="_blank" rel="noreferrer">GitHub ↗</a>
+              <a href="tel:+8618028356417" data-i18n="phoneLink">Phone / WeChat · 18028356417</a>
+            </div>
           </div>
           <button id="language-toggle" type="button" aria-label="Switch language">中文</button>
         </div>
@@ -40,7 +43,7 @@
           <h2 data-i18n="aboutTitle">Curious about how intelligent systems become genuinely useful.</h2>
           <div class="body-copy">
             <p data-i18n="aboutP1">I’m a third-year undergraduate studying Artificial Intelligence at Peking University, focused on foundation models and agent systems. I enjoy turning ambiguous, real-world tasks into dependable technical products.</p>
-            <p data-i18n="aboutP2">My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm internships.</p>
+            <p data-i18n="aboutP2">My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm opportunities.</p>
           </div>
           <div class="facts">
             <div><span data-i18n="factSchoolLabel">EDUCATION</span><strong data-i18n="factSchool">Peking University</strong></div>
@@ -122,6 +125,40 @@
       </div>
     </main>
 
+    <div class="guide-overlay" aria-hidden="true">
+      <section class="guide-card" role="dialog" aria-modal="true" aria-labelledby="guide-title">
+        <header class="guide-header">
+          <span class="guide-counter">1 / 4</span>
+          <button class="guide-skip" type="button">Skip</button>
+        </header>
+
+        <div class="guide-slides">
+          <article class="guide-slide active" data-guide-slide="0">
+            <div class="guide-visual welcome-visual" aria-hidden="true"><span class="welcome-core">YL</span><i></i><i></i><i></i><b></b></div>
+            <p class="guide-kicker"></p><h2 id="guide-title"></h2><p class="guide-copy"></p>
+          </article>
+          <article class="guide-slide" data-guide-slide="1">
+            <div class="guide-visual project-visual" aria-hidden="true"><div class="mini-project"><span>01</span><strong>Agent System</strong><i></i><i></i><i></i></div><div class="mini-cursor">↖</div></div>
+            <p class="guide-kicker"></p><h2></h2><p class="guide-copy"></p>
+          </article>
+          <article class="guide-slide" data-guide-slide="2">
+            <div class="guide-visual chat-visual" aria-hidden="true"><div class="mini-chat"><span>AI</span><p></p><p></p><b><i></i><i></i><i></i></b></div></div>
+            <p class="guide-kicker"></p><h2></h2><p class="guide-copy"></p>
+          </article>
+          <article class="guide-slide" data-guide-slide="3">
+            <div class="guide-visual connect-visual" aria-hidden="true"><span class="connect-center">✦</span><i></i><i></i><i></i><b></b><b></b></div>
+            <p class="guide-kicker"></p><h2></h2><p class="guide-copy"></p>
+          </article>
+        </div>
+
+        <footer class="guide-footer">
+          <button class="guide-prev" type="button" aria-label="Previous step">←</button>
+          <div class="guide-dots" aria-label="Guide progress"><button class="active" type="button" aria-label="Step 1"></button><button type="button" aria-label="Step 2"></button><button type="button" aria-label="Step 3"></button><button type="button" aria-label="Step 4"></button></div>
+          <button class="guide-next" type="button">Next <span>→</span></button>
+        </footer>
+      </section>
+    </div>
+
     <aside class="ai-assistant" data-endpoint="https://yueying-portfolio-assistant.laurenluo05.workers.dev/chat" aria-label="Portfolio AI assistant">
       <button class="ai-launcher" type="button" aria-expanded="false" aria-controls="ai-panel">
         <span class="ai-launcher-pulse" aria-hidden="true"></span>
@@ -144,6 +181,6 @@
       </section>
     </aside>
 
-    <script src="script.js?v=20260712-ai-assistant-v2"></script>
+    <script src="script.js?v=20260712-guided-portfolio-v1"></script>
   </body>
 </html>
