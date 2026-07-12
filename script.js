@@ -348,7 +348,7 @@ toggle.addEventListener('click', () => {
   const currentScroll = window.scrollY;
   lang = lang === 'en' ? 'zh' : 'en';
   render();
-  requestAnimationFrame(() => window.scrollTo(0, currentScroll));
+  requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo(0, currentScroll)));
 });
 
 document.querySelectorAll('.project-toggle').forEach((button) => {
