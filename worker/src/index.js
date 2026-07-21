@@ -3,14 +3,14 @@ const requestBuckets = new Map();
 const PORTFOLIO_KNOWLEDGE = `
 PUBLIC PROFILE
 - Name: Yueying Luo / 罗玥萦.
-- Third-year undergraduate in Artificial Intelligence at Peking University; expected graduation June 2027.
+- Undergraduate in Artificial Intelligence at Peking University; expected graduation June 2027.
 - Focus: foundation models, LLM post-training, agent systems, AI search, active retrieval and evaluation.
-- Target roles: applied LLM algorithm and Agent algorithm internships.
+- Target roles: applied LLM algorithm and Agent algorithm opportunities.
 - Contact: luoyueying@stu.pku.edu.cn; phone / WeChat 18028356417; GitHub https://github.com/yueyingluo.
 - Personal description: strongly curious and self-driven; starts from real needs, proactively explores industry developments, and enjoys cross-team collaboration that turns technology into practical value.
 
 EXPERIENCE ORDER
-1. Intelligent Service Algorithm Intern, Taotian Group, June 2026–present.
+1. Intelligent Service Algorithm Intern, Taotian Group Intelligent Service Department, June 2026–present.
 2. AI Strategy Intern, Baidu, December 2025–May 2026.
 3. Research Intern, Peking University Wangxuan Institute of Computer Technology, March–August 2025.
 
@@ -18,14 +18,14 @@ PROJECT 1 — TAOTIAN INTELLIGENT SERVICE ALGORITHM
 - Scenario: when merchants and consumers cannot negotiate a satisfactory after-sales result, the platform intervenes with solutions such as return-and-refund or refund-only.
 - Objective: improve user satisfaction. Guardrail: improve the Agent's adherence to service strategy and SOP, avoiding compensation that is too high or too low and avoiding process violations.
 - Yueying built the project from zero to one, mainly in Python: data construction, two Evaluators, Reward design, Skill update workflow and offline evaluation.
-- Result currently safe to disclose: SOP adherence improved from 81% to 87%. Satisfaction uplift is an offline prediction target and has not yet been presented as a confirmed online causal gain.
+- Results currently safe to disclose: SOP adherence improved from 77% to 93%, and policy coverage improved from 86% to 91%.
 - Core modeling: do not treat all dissatisfied cases as one failure. Separate policy capability gaps from Agent execution gaps.
 - Policy gap A: information is missing; guide users to upload evidence or complete required information.
 - Policy gap B: current rules can resolve the case, but the resolution is not good enough; improve compliant flexibility, empathy, guidance or compensation rationality.
 - Execution gap: the strategy is sufficient, but the Agent does not faithfully follow it.
 - Two optimization lines: a policy/satisfaction Evaluator and Reward for policy quality; an SOP Evaluator and process-guardrail Reward for adherence.
-- Strategy dimension analysis: an LLM abstracts dimensions from Agent and final platform solutions; a rubric-based evaluator scores evidence completeness, compliant flexibility, compensation rationality, empathy and user guidance.
-- LightGBM is proposed to estimate P(satisfied | case context, strategy dimensions). The probability difference between Agent and platform solutions is expected uplift for offline prioritization. This is prediction, not causal proof.
+- Repairable-subset routing separates cases that need additional evidence from cases whose current policy can be improved; only the repairable subset enters policy mining.
+- For repairable cases, the system treats each resolution as the minimum analysis unit, performs within-batch clustering, and mines candidate features such as consumer return willingness, product-issue severity, and seller-language patterns. Recurring gaps are converted into structured policy edits so iteration becomes data-driven, attributable, and verifiable.
 - Shared evolution engine is inspired by SkillOpt and built independently: frozen service Agent + external Skill/SOP; rollout scored trajectories; reflect on success and failure minibatches separately; bounded Add/Delete/Replace edits; held-out validation using target and guardrail evaluators; accept only improvements, while rejected edits enter a negative-feedback buffer.
 
 PROJECT 2 — BAIDU LAYERED AI SEARCH

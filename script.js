@@ -7,14 +7,14 @@ const copy = {
     aboutP2: 'My work spans agent evolution, AI search, active retrieval, and evaluation. I’m seeking applied LLM and agent-algorithm opportunities.',
     factSchoolLabel: 'EDUCATION', factSchool: 'Peking University', factMajorLabel: 'FOCUS', factMajor: 'AI · Foundation Models · Agents', factDateLabel: 'EXPECTED', factDate: 'Jun 2027',
     experienceTitle: 'Experience', experienceNote: 'Building systems that search, reason, and improve.',
-    taotianDate: 'JUN 2026 — PRESENT', taotianTitle: 'Intelligent Service Algorithm Intern <span>@ Taotian Group</span>', taotianBody: 'Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence.',
+    taotianDate: 'JUN 2026 — PRESENT', taotianTitle: 'Intelligent Service Algorithm Intern <span>@ Taotian Group · Intelligent Service</span>', taotianBody: 'Building a self-evolving agent for platform intervention in after-sales disputes. The work separates service-policy improvement from policy adherence.',
     taotianTags: '<li>Agent evolution</li><li>LLM evaluation</li><li>Reward design</li><li>Python</li>',
     baiduDate: 'DEC 2025 — MAY 2026', baiduTitle: 'AI Strategy Intern <a href="https://baike.baidu.com/item/GenFlow/66327629" target="_blank" rel="noreferrer">@ Baidu ↗</a>', baiduBody: 'Built layered AI search capabilities through query understanding, reranking, and multi-agent deep search.',
     baiduTags: '<li>Query rewriting</li><li>Reranking</li><li>Multi-agent search</li><li>Python</li>',
     pkuDate: 'MAR 2025 — AUG 2025', pkuTitle: 'Research Intern <span>@ Peking University</span>', pkuBody: 'Trained a legal QA agent to interleave retrieval and reasoning through SFT + reinforcement learning.',
     pkuTags: '<li>Active retrieval</li><li>SFT + RL</li><li>ReAct</li><li>PyTorch</li>',
     workTitle: 'Selected work', workNote: 'Problem framing · architecture · implementation', detailButton: 'Explore the full case study', detailCloseButton: 'Close case study',
-    project1Kicker: 'AGENT EVOLUTION · TAOTIAN', project1Title: 'A self-evolving after-sales intervention agent', project1Body: 'A dual-objective feedback loop that improves service policies while making the agent more reliable at executing existing SOPs.', project1Metric1: 'SOP adherence: 81% → 87%', project1Metric2: '0 → 1 ownership',
+    project1Kicker: 'AGENT EVOLUTION · TAOTIAN', project1Title: 'A self-evolving after-sales intervention agent', project1Body: 'A dual-objective feedback loop that improves service policies while making the agent more reliable at executing existing SOPs.', project1Metric1: 'SOP adherence: 77% → 93%', project1Metric2: 'Policy coverage: 86% → 91%',
     project2Kicker: 'AI SEARCH · BAIDU', project2Title: 'Layered AI search for direct and deep retrieval', project2Body: 'A routing system combines query rewriting and reranking for fast search with multi-agent progressive search for complex tasks.', project2Metric1: '79% quality rate', project2Metric2: '94% usability',
     project3Kicker: 'APPLIED RESEARCH · ACTIVE RETRIEVAL', project3Title: 'Training a legal QA agent for active retrieval', project3Body: 'SFT + RL trains a Qwen2.5-7B agent to alternate between reasoning, retrieval, and answer generation over legal knowledge.', project3Metric1: '1,300+ legal documents', project3Metric2: '+5 pp Accuracy',
     footer: 'Designed and built by Yueying Luo. Open to applied LLM and agent opportunities.'
@@ -27,14 +27,14 @@ const copy = {
     aboutP2: '近期工作涉及 Agent 自进化、AI 搜索、主动检索与评测。我正在寻找大模型算法与 Agent 方向的工作机会。',
     factSchoolLabel: '教育经历', factSchool: '北京大学', factMajorLabel: '关注方向', factMajor: '人工智能 · 基础模型 · 智能体', factDateLabel: '预计毕业', factDate: '2027 年 6 月',
     experienceTitle: '实习与研究经历', experienceNote: '构建能够检索、推理并持续优化的系统。',
-    taotianDate: '2026 年 6 月 — 至今', taotianTitle: '智能服务算法实习生 <span>@ 淘天集团</span>', taotianBody: '面向售后纠纷的平台介入场景，从 0 到 1 构建自进化 Agent，将服务策略优化与策略遵循优化解耦。',
+    taotianDate: '2026 年 6 月 — 至今', taotianTitle: '智能服务算法实习生 <span>@ 淘天集团 · 智能服务部</span>', taotianBody: '面向售后纠纷的平台介入场景，从 0 到 1 构建自进化 Agent，将服务策略优化与策略遵循优化解耦。',
     taotianTags: '<li>Agent 自进化</li><li>LLM 评测</li><li>Reward 设计</li><li>Python</li>',
     baiduDate: '2025 年 12 月 — 2026 年 5 月', baiduTitle: '通用智能体策略实习生 <a href="https://baike.baidu.com/item/GenFlow/66327629" target="_blank" rel="noreferrer">@ 百度 ↗</a>', baiduBody: '围绕 Query 理解、检索重排与多 Agent 深度搜索，参与构建分层 AI 搜索能力。',
     baiduTags: '<li>Query 改写</li><li>检索重排</li><li>多 Agent 搜索</li><li>Python</li>',
     pkuDate: '2025 年 3 月 — 2025 年 8 月', pkuTitle: '研究实习生 <span>@ 北京大学</span>', pkuBody: '通过 SFT + 强化学习训练模型交替完成推理与检索，提升法律问答质量。',
     pkuTags: '<li>主动检索</li><li>SFT + RL</li><li>ReAct</li><li>PyTorch</li>',
     workTitle: '代表工作', workNote: '问题建模 · 系统架构 · 技术实现', detailButton: '展开完整案例', detailCloseButton: '收起案例',
-    project1Kicker: 'AGENT 自进化 · 淘天', project1Title: '面向售后平台介入的自进化 Agent', project1Body: '一套双目标反馈闭环：持续优化服务策略，同时让 Agent 更稳定地遵循既有 SOP。', project1Metric1: 'SOP 遵循率：81% → 87%', project1Metric2: '从 0 到 1 负责',
+    project1Kicker: 'AGENT 自进化 · 淘天', project1Title: '面向售后平台介入的自进化 Agent', project1Body: '一套双目标反馈闭环：持续优化服务策略，同时让 Agent 更稳定地遵循既有 SOP。', project1Metric1: 'SOP 遵循率：77% → 93%', project1Metric2: '策略覆盖率：86% → 91%',
     project2Kicker: 'AI 搜索 · 百度', project2Title: '直接搜索与深度搜索协同的分层 AI 搜索', project2Body: '通过意图分流，将 Query 改写与重排用于快速搜索，并以多 Agent 渐进式搜索处理复杂任务。', project2Metric1: '优质率 79%', project2Metric2: '可用率 94%',
     project3Kicker: '应用研究 · 主动检索', project3Title: '训练具备主动检索能力的法律问答 Agent', project3Body: '基于 Qwen2.5-7B，通过 SFT + RL 训练模型在法律知识上交替完成推理、检索与回答。', project3Metric1: '1,300+ 法律文档', project3Metric2: 'Accuracy +5 pp',
     footer: '由罗玥萦设计与开发。期待大模型算法与 Agent 方向机会。'
@@ -50,14 +50,14 @@ const projectDetails = {
         {letter:'S', name:'Situation', title:'Negotiation reaches a dead end', text:'When merchants and consumers cannot reach an acceptable after-sales agreement, the platform must intervene with actions such as return-and-refund or refund-only. The solution must improve user experience without violating compensation or process constraints.'},
         {letter:'T', name:'Task', title:'Turn vague dissatisfaction into learnable signals', text:'Build an evolution loop that separates policy capability gaps from execution deviations, then improves both through one controllable Skill-OPT-inspired engine.'},
         {letter:'A', name:'Action', title:'Two rewards, two evaluators, one update engine', text:'Construct paired agent/platform cases, diagnose the failure type, update the procedural skill, and gate each update with offline evaluation before it can affect the agent.'},
-        {letter:'R', name:'Result', title:'A measurable guardrail gain', text:'SOP adherence improved from 81% to 87%. Satisfaction uplift remains an offline modeling target until it is validated through online experiments.'}
+        {letter:'R', name:'Result', title:'Two measurable system gains', text:'SOP adherence improved from 77% to 93%, while policy coverage increased from 86% to 91%.'}
       ],
       architectureTitle: 'The evolution loop',
       architectureNote: 'The diagnostic split is the center of the system: policy insufficiency and execution failure never share the same optimization signal.',
       nodes: [
         {tag:'01 · OBSERVE', title:'Unresolved case', text:'Conversation, order context, agent proposal, final platform resolution, and satisfaction signal.', tone:'violet'},
         {tag:'02 · DIAGNOSE', title:'Dual evaluator', text:'Route the case into policy-gap or adherence-gap optimization.', tone:'orange'},
-        {tag:'03A · IMPROVE POLICY', title:'Strategy evolution', text:'Fill evidence gaps, add compliant alternatives, improve empathy and user guidance.', tone:'green'},
+        {tag:'03A · IMPROVE POLICY', title:'Strategy evolution', text:'Cluster repairable solutions, mine candidate features, and produce structured policy edits.', tone:'green'},
         {tag:'03B · IMPROVE EXECUTION', title:'SOP alignment', text:'Reward correct process, compensation boundaries, and faithful strategy execution.', tone:'blue'},
         {tag:'04 · UPDATE', title:'Skill-OPT engine', text:'Propose controlled edits to the external procedural skill.', tone:'violet'},
         {tag:'05 · GATE', title:'Offline validation', text:'Accept only updates that improve the target evaluator without hurting guardrails.', tone:'green'}
@@ -65,14 +65,14 @@ const projectDetails = {
       modulesTitle: 'How the problem is modeled',
       modules: [
         {number:'01', title:'Failure taxonomy', text:'Policy gap A: missing information prevents a valid decision, so the agent should guide evidence upload. Policy gap B: current rules technically resolve the case, but the resolution is not satisfactory enough. Execution gap: the policy is sufficient, but the agent does not follow it.', meta:'Three failure modes → two optimization tracks'},
-        {number:'02', title:'Strategy dimension mining', text:'Use a model to abstract reusable dimensions from agent and final platform resolutions: evidence completeness, compliant flexibility, compensation rationality, empathy, and user guidance. A rubric-based evaluator scores both resolutions on the same dimensions.', meta:'Free-form cases → structured features'},
-        {number:'03', title:'Satisfaction uplift model', text:'Use LightGBM to estimate P(satisfied | case context, strategy scores). Score the agent and platform resolution separately; their probability difference becomes the expected uplift used for offline strategy prioritization.', meta:'Prediction, not causal proof'},
+        {number:'02', title:'Repairable-subset routing', text:'Separate cases that need missing evidence from cases whose current policy can be improved. Only the repairable subset enters policy mining, which keeps noisy or fundamentally unresolved cases out of the update signal.', meta:'Diagnose first, optimize second'},
+        {number:'03', title:'Policy-gap discovery and optimization', text:'Focus on repairable cases and cluster solutions within each batch. Mine candidate features such as the consumer’s willingness to return, product-issue severity, and seller-language patterns, then turn recurring gaps into structured policy edits.', meta:'Solution-level mining → attributable edits'},
         {number:'04', title:'Dual-objective optimization', text:'One evaluator rewards policy improvement; the other rewards faithful SOP execution. Keeping them separate prevents a satisfaction-oriented update from silently breaking compensation and process guardrails.', meta:'Effectiveness × controllability'}
       ],
       challengesTitle: 'Challenges and design trade-offs',
       challenges: [
         {title:'Evaluator reliability', text:'LLM judges can drift or reward superficial wording. Use fixed rubrics, human-calibrated samples, agreement checks, and regression sets around high-risk policy boundaries.'},
-        {title:'Prediction versus causality', text:'Historical transfer-to-human cases are selected, not randomized. LightGBM can rank likely improvements, but true satisfaction lift still requires calibrated offline validation and eventual gray/A-B experiments.'},
+        {title:'From patterns to general rules', text:'Batch clusters may capture temporary wording or case mix. Candidate features must be abstracted into reusable policy conditions and validated on held-out case families before adoption.'},
         {title:'Reward conflict', text:'A more generous solution may improve satisfaction while increasing business risk. Separate rewards make the conflict visible, and validation gating prevents one metric from dominating silently.'},
         {title:'Generalization of skill edits', text:'An edit that fixes one case may overfit its wording. Updates should abstract procedures, use bounded edits, and be tested on held-out case families before acceptance.'}
       ],
@@ -160,14 +160,14 @@ const projectDetails = {
         {letter:'S', name:'Situation 情境', title:'商消协商进入僵局', text:'当商家与消费者无法达成满意的售后方案时，平台需要介入并给出退货退款、仅退款等决策；既要提升用户体验，又不能突破赔付边界和流程约束。'},
         {letter:'T', name:'Task 任务', title:'把模糊的不满意变成可学习信号', text:'搭建一套自进化闭环，区分“策略能力缺口”和“Agent 执行偏差”，并通过同一套受控引擎分别优化两条线。'},
         {letter:'A', name:'Action 行动', title:'双 Reward、双 Evaluator、一套更新引擎', text:'构造 Agent 与平台最终方案的配对案例，诊断失败类型，更新外部 Skill，并在影响线上 Agent 前通过离线评测门控。'},
-        {letter:'R', name:'Result 结果', title:'护栏指标获得可验证提升', text:'SOP 遵循率从 81% 提升到 87%。满意率增益目前作为离线预测目标，等待后续线上实验验证。'}
+        {letter:'R', name:'Result 结果', title:'两项系统指标获得可验证提升', text:'SOP 遵循率从 77% 提升到 93%，策略覆盖率从 86% 提升到 91%。'}
       ],
       architectureTitle: '自进化闭环',
       architectureNote: '系统的中心不是更新，而是诊断分流：策略不足与执行失败不会共享同一套优化信号。',
       nodes: [
         {tag:'01 · 观察', title:'未解决案例', text:'对话、订单上下文、Agent 方案、平台最终方案与满意度反馈。', tone:'violet'},
         {tag:'02 · 诊断', title:'双 Evaluator', text:'将案例路由到策略缺口或策略遵循优化。', tone:'orange'},
-        {tag:'03A · 策略优化', title:'策略进化', text:'补足证据，引入合规变通方案，改善共情与用户引导。', tone:'green'},
+        {tag:'03A · 策略优化', title:'策略进化', text:'聚类可修复方案、挖掘候选特征，并产出结构化策略修改。', tone:'green'},
         {tag:'03B · 执行优化', title:'SOP 对齐', text:'奖励正确流程、赔付边界与对既有策略的忠实执行。', tone:'blue'},
         {tag:'04 · 更新', title:'Skill-OPT 引擎', text:'对外部程序化 Skill 提出受控的文本更新。', tone:'violet'},
         {tag:'05 · 门控', title:'离线验证', text:'只有目标指标提升且护栏不退化的更新才被接受。', tone:'green'}
@@ -175,14 +175,14 @@ const projectDetails = {
       modulesTitle: '如何对问题建模',
       modules: [
         {number:'01', title:'失败类型抽象', text:'策略缺口 A：信息不足，Agent 应引导用户补充凭证；策略缺口 B：现有规则能处理，但方案不够满意；执行缺口：策略充分，但 Agent 没有遵循。', meta:'三类失败 → 两条优化线'},
-        {number:'02', title:'策略维度挖掘', text:'用模型从 Agent 方案和平台最终方案中抽取可复用维度：证据充分性、合规变通、赔付合理性、共情和用户引导；再由统一 rubric 的 Evaluator 对两个方案评分。', meta:'自由文本案例 → 结构化特征'},
-        {number:'03', title:'满意率增益预测', text:'使用 LightGBM 拟合 P(满意｜案例上下文，策略维度分)。分别对 Agent 与平台方案预测，两者概率差作为预期增益，用于离线确定策略迭代优先级。', meta:'这是预测，不是因果证明'},
+        {number:'02', title:'可修复子集分流', text:'区分需要补充凭证的案例与现有策略仍可优化的案例；仅让可修复子集进入策略挖掘，避免不可解或噪声案例污染更新信号。', meta:'先诊断，再优化'},
+        {number:'03', title:'策略缺口发现与优化', text:'聚焦可修复子集，以方案为最小单元做批内聚类，挖掘消费者退货意愿、商品问题程度、卖家话术表达等候选特征，再把高频缺口转化为结构化策略修改。', meta:'方案级挖掘 → 可归因修改'},
         {number:'04', title:'双目标优化', text:'一套 Evaluator 奖励策略变好，另一套奖励 Agent 忠实遵循 SOP。两者解耦，避免为了满意率而无意突破赔付和流程护栏。', meta:'效果 × 可控性'}
       ],
       challengesTitle: '挑战与技术取舍',
       challenges: [
         {title:'Evaluator 可信度', text:'LLM Judge 可能漂移，也可能偏好表面表达。需要固定 rubric、人工校准样本、一致性检查和高风险规则边界的回归集。'},
-        {title:'预测不等于因果', text:'转人工案例不是随机采样。LightGBM 可以排序潜在收益，但真实满意率提升仍需概率校准、时间外验证以及最终灰度 / A-B 实验。'},
+        {title:'从模式到通用规则', text:'批内聚类可能学到短期话术或样本结构。候选特征需要进一步抽象为可复用的策略条件，并在留出的案例族上验证后再采纳。'},
         {title:'Reward 冲突', text:'更高赔付可能提高满意度，却增加业务风险。拆分 Reward 能让冲突显式化，离线门控避免一个指标悄悄支配更新。'},
         {title:'Skill 更新泛化', text:'修复单个案例的更新可能过拟合具体措辞。更新应抽象为程序化规则、限制编辑范围，并在留出的案例族上验证。'}
       ],
@@ -271,8 +271,8 @@ const diagramCopy = {
       router: 'Root-cause attribution', routerText: 'The dual evaluators decide which part of the system should learn.',
       policyLane: 'LINE A · POLICY CAPABILITY', policyTitle: 'Improve an insufficient strategy', policySteps: [
         ['Compare', 'Agent proposal ↔ final platform resolution'],
-        ['Abstract', 'Evidence, flexibility, empathy, guidance and compensation dimensions'],
-        ['Score', 'Satisfaction evaluator + expected uplift reward']
+        ['Cluster', 'Group repairable solutions within each batch'],
+        ['Edit', 'Mine candidate features and generate structured policy updates']
       ],
       adherenceLane: 'LINE B · POLICY EXECUTION', adherenceTitle: 'Make the agent follow a sufficient SOP', adherenceSteps: [
         ['Align', 'Current SOP ↔ actual agent trajectory'],
@@ -327,8 +327,8 @@ const diagramCopy = {
       router: '根因诊断分流', routerText: '双 Evaluator 先判断究竟应该让系统的哪一部分学习。',
       policyLane: '优化线 A · 策略能力', policyTitle: '优化本身不够好的服务策略', policySteps: [
         ['方案对比', 'Agent 方案 ↔ 平台最终解决方案'],
-        ['维度抽象', '证据、合规变通、共情、引导与赔付合理性'],
-        ['效果评分', '满意率 Evaluator + 预期增益 Reward']
+        ['批内聚类', '以方案为单元聚合可修复案例'],
+        ['结构化修改', '挖掘候选特征并生成可验证的策略更新']
       ],
       adherenceLane: '优化线 B · 策略执行', adherenceTitle: '让 Agent 遵循已经足够好的 SOP', adherenceSteps: [
         ['轨迹对齐', '当前 SOP ↔ Agent 实际执行轨迹'],
