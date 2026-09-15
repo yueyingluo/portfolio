@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Evolution Studio｜逐步演示</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="demo-page">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="demo-shell">
+    <aside class="demo-sidebar">
+      <div class="brand"><span class="brand-mark">AE</span><div><strong>Agent Evolution</strong><small>PROMPT OPTIMIZATION WALKTHROUGH</small></div></div>
+      <nav aria-label="演示步骤"><button data-step-target>1. PM 配置目标</button><button data-step-target>2. 读取失败样本</button><button data-step-target>3. 双 Evaluator 归因</button><button data-step-target>4. 生成 Prompt 候选</button><button data-step-target>5. 回归准入</button></nav>
+      <div class="sidebar-run"><span>DEMO JOB</span><strong>EVO-240915-12</strong><small>脱敏案例 · 静态演示</small></div>
+      <a class="back-link" href="index.html">← 返回研发作品集</a>
+    </aside>
+    <main class="demo-main">
+      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">AFTER-SALES AGENT / STEP-BY-STEP</p><h1>看 PM 的评测目标如何变成一次受控 Prompt 更新</h1></div><span class="status-pill">Dual Evaluator · Dual Reward</span></header>
+      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。案例和策略文本均为脱敏示意，不包含生产数据。</span></div>
+
+      <section class="walkthrough" data-walkthrough>
+        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 05</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>EVO-240915-12</span></div>
+        <div class="walkthrough-frame">
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">01</span><div><h2>PM 选择本轮关心的评测维度</h2><p>业务目标先被翻译成可执行的 Evaluator 与准入条件。</p></div></header>
+            <div class="step-content">
+              <div class="config-list"><div class="config-item"><span>策略是否覆盖“商品破损 + 已举证”场景</span><span class="toggle">&#8203;</span></div><div class="config-item"><span>Agent 是否完整执行举证核验 SOP</span><span class="toggle">&#8203;</span></div><div class="config-item"><span>赔付与流程是否满足业务护栏</span><span class="toggle">&#8203;</span></div></div>
+              <div class="step-caption"><strong>我搭建的入口：</strong>PM 不需要修改 Agent Prompt，只需配置关注维度、样本集和护栏，系统自动组织后续评测与优化。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">02</span><div><h2>系统读取一个“没有解决用户问题”的样本</h2><p>对话、订单状态、Agent 方案和平台最终方案被组织为一条配对数据。</p></div></header>
+            <div class="step-content">
+              <div class="case-card"><div class="case-line"><span>用户问题</span><strong>商品到货破损，已上传外包装与商品照片。</strong></div><div class="case-line"><span>当前 SOP</span><strong>核验举证 → 判断责任 → 选择策略 → 告知下一步。</strong></div><div class="case-line"><span>Agent 方案</span><strong>再次要求用户补充已经上传的商品照片。</strong></div><div class="case-line"><span>平台方案</span><strong>举证已满足，进入责任判断并说明处理时效。</strong></div></div>
+              <div class="step-caption">单看“最终没解决”还不知道该改什么：可能是策略根本不覆盖，也可能是 Agent 没执行好已有 SOP。下一步由双 Evaluator 分开判断。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">03</span><div><h2>双 Evaluator 把问题归因到“执行偏差”</h2><p>双 Reward 同时保留用户目标与业务护栏，避免只追一个分数。</p></div></header>
+            <div class="step-content">
+              <div class="choice-grid"><div class="focus-card"><h3>策略有效性 Evaluator <span class="score">0.84</span></h3><p>当前策略已覆盖此场景，无需新增处置策略。</p></div><div class="focus-card warning"><h3>SOP 遵循 Evaluator <span class="score" style="color:var(--red)">0.31</span></h3><p>Agent 未读取已有举证状态，在核验步骤重复索取。</p></div></div>
+              <div class="simple-flow" style="margin-top:14px"><div class="flow-node"><b>USER REWARD</b>问题解决 0.38</div><span class="flow-arrow">+</span><div class="flow-node"><b>GUARDRAIL REWARD</b>流程合规 0.92</div><span class="flow-arrow">→</span><div class="flow-node active"><b>ROOT CAUSE</b>优化执行路径</div></div>
+              <div class="step-caption"><strong>关键设计：</strong>策略能力与 SOP 执行分别评估，满意度目标与赔付、流程护栏分别计分，更新方向因此可解释。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">04</span><div><h2>受控更新引擎只修改被证据支持的规则</h2><p>失败反思产生 Add / Delete / Replace 操作，并限制编辑范围。</p></div></header>
+            <div class="step-content">
+              <div class="prompt-diff"><div class="prompt-version"><span>CURRENT / v11</span><p>若商品破损，要求用户上传外包装与商品照片；材料齐全后进入责任判断。</p></div><div class="prompt-version new"><span>CANDIDATE / v12 · ADD</span><p><strong>新增：</strong>先读取会话与订单中的举证状态；材料已存在时不得重复索取，直接进入下一 SOP 节点。</p></div></div>
+              <div class="simple-flow" style="margin-top:14px"><div class="flow-node"><b>ROLLOUT</b>收集失败轨迹</div><span class="flow-arrow">→</span><div class="flow-node"><b>REFLECT</b>聚合重复模式</div><span class="flow-arrow">→</span><div class="flow-node active"><b>BOUNDED EDIT</b>生成 v12</div></div>
+              <div class="step-caption">候选 Prompt 不会立刻覆盖当前版本。它必须先在留出集上证明目标指标提升且护栏无回退。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">05</span><div><h2>留出集回归通过，Candidate v12 准入</h2><p>系统更新当前最佳版本，同时保留旧版本供审计与回滚。</p></div></header>
+            <div class="step-content">
+              <div class="gate-grid"><div class="gate-card pass"><span>策略有效性</span><strong>PASS</strong></div><div class="gate-card pass"><span>SOP 遵循</span><strong>+16 PP</strong></div><div class="gate-card pass"><span>赔付护栏</span><strong>NO REGRESSION</strong></div><div class="gate-card pass"><span>流程合规</span><strong>PASS</strong></div><div class="gate-card pass"><span>留出案例</span><strong>PASS</strong></div></div>
+              <div class="result-strip" style="margin-top:18px"><div><span>候选版本</span><strong>v12</strong></div><div><span>最终状态</span><strong style="color:var(--accent)">ACCEPTED</strong></div><div><span>SOP 遵循率</span><strong>77% → 93%</strong></div><div><span>策略覆盖率</span><strong>86% → 91%</strong></div></div>
+              <div class="step-caption"><strong>我的负责范围：</strong>数据构造、双 Evaluator、双 Reward、失败反思、Prompt 结构化修改、留出集门禁与离线评测全链路。</div>
+            </div>
+          </article>
+        </div>
+        <div class="walkthrough-actions"><button data-step-prev>← 上一步</button><span class="action-hint">侧栏可直接跳转到任一步骤</span><button data-step-next>下一步 →</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

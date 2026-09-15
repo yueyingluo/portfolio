@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="罗玥萦的 Agent 工程与 AI Native 研发作品集。">
+  <title>罗玥萦｜Agent 工程与 AI Native 研发</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="portfolio-page">
+  <div class="grain" aria-hidden="true"></div>
+  <main class="portfolio-layout">
+    <aside class="portfolio-intro">
+      <div>
+        <p class="eyebrow">ENGINEERING PORTFOLIO / 2026</p>
+        <h1>Yueying<br>Luo<span>.</span></h1>
+        <p class="role">构建可评测、可修复、可持续迭代的 Agent 系统与 AI Native 产品。</p>
+        <nav aria-label="页面导航">
+          <a href="#about" class="active">关于我</a>
+          <a href="#experience">研发经历</a>
+          <a href="#systems">系统 Demo</a>
+        </nav>
+      </div>
+      <div class="intro-footer">
+        <p>北京大学人工智能本科，2027 届。求职方向：Agent 工程师 / AI Native 研发。</p>
+        <div class="contact-links">
+          <a href="mailto:luoyueying@stu.pku.edu.cn">Email ↗</a>
+          <a href="https://github.com/yueyingluo" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href="tel:+8618028356417">电话 / 微信 · 18028356417</a>
+        </div>
+      </div>
+    </aside>
+
+    <div class="portfolio-content">
+      <section id="about" class="portfolio-section hero-section">
+        <p class="section-number">01</p>
+        <h2>让 Agent 从“能生成”<br><span>走向“可交付”。</span></h2>
+        <div class="lead-copy">
+          <p>我关注 Agent 的工程化落地：把需求转化为工作流，用评测驱动修复，再以质量门禁保障交付。</p>
+        </div>
+        <div class="fact-grid">
+          <div><span>EDUCATION</span><strong>北京大学 · 人工智能</strong></div>
+          <div><span>FOCUS</span><strong>Agent Workflow · AI Coding</strong></div>
+          <div><span>EXPECTED</span><strong>2027 年 6 月毕业</strong></div>
+        </div>
+      </section>
+
+      <section id="experience" class="portfolio-section">
+        <p class="section-number">02</p>
+        <div class="section-heading">
+          <h2>研发经历</h2>
+          <p>从算法机制到产品闭环</p>
+        </div>
+        <article class="experience-row">
+          <p class="date">2026.06 — 至今</p>
+          <div>
+            <h3>智能客服算法研发实习生 <span>@ 淘天集团 · 智能服务部</span></h3>
+            <p>从 0 到 1 搭建售后介入 Agent 自进化研发闭环，将 PM 关注的业务维度转化为可执行标准，串联自动评测、失败归因、Prompt 优化与回归准入。</p>
+            <ul class="tag-list"><li>Prompt 自动优化</li><li>双 Evaluator</li><li>双 Reward</li><li>Skill-OPT</li></ul>
+          </div>
+        </article>
+        <article class="experience-row">
+          <p class="date">2025.12 — 2026.05</p>
+          <div>
+            <h3>通用智能体策略实习生 <span>@ 百度 · 个人超级智能事业群组</span></h3>
+            <p>参与构建渐进式多 Agent 深度搜索系统，通过双智能体协作、意图分类驱动的差异化路径和统一工具抽象，完成复杂信息检索与迭代整合。</p>
+            <ul class="tag-list"><li>Multi-Agent</li><li>Plan–Execute</li><li>Tool Use</li><li>Workflow 编排</li></ul>
+          </div>
+        </article>
+      </section>
+
+      <section id="systems" class="portfolio-section systems-section">
+        <p class="section-number">03</p>
+        <div class="section-heading">
+          <h2>系统 Demo</h2>
+          <p>点击卡片，在新标签页查看一次完整运行</p>
+        </div>
+        <a class="system-card featured" href="mini-swe-demo.html" target="_blank" rel="noreferrer">
+          <div class="system-visual coding-visual" aria-hidden="true">
+            <div class="visual-toolbar"><span class="dot">&#8203;</span><span class="dot">&#8203;</span><span class="dot">&#8203;</span><span>run / QG-240915-07</span></div>
+            <div class="visual-flow"><b>Generate</b><em>→</em><b>Execute</b><em>→</em><b class="warn">Block</b><em>→</em><b class="pass">Repair</b></div>
+            <pre><span class="minus">- return value.lower()</span>
+<span class="plus">+ value = re.sub(...)</span>
+<span class="plus">+ return value.strip("-")</span></pre>
+            <div class="mini-gates"><span>TEST ✓</span><span>RUFF ✓</span><span>SEC ✓</span><span>CC ✓</span><span>DIFF ✓</span></div>
+          </div>
+          <div class="system-copy">
+            <p class="project-kicker">AI CODING · PERSONAL PROJECT</p>
+            <h3>可验证 AI Coding Agent</h3>
+            <p>输入一个代码任务，查看 DeepSeek 如何生成 Patch、被 Ruff 门禁拦截、读取结构化诊断并在第二轮完成修复。页面展开每轮轨迹、完整 Diff 与五级门禁结果。</p>
+            <div class="metric-row"><span><strong>75.0%</strong> 闭环通过率</span><span><strong>20/20</strong> 缺陷命中</span><span><strong>2.62</strong> 平均轮次</span></div>
+            <span class="open-link">进入系统 Demo <b>↗</b></span>
+          </div>
+        </a>
+
+        <div class="system-grid">
+          <a class="system-card compact" href="taotian-demo.html" target="_blank" rel="noreferrer">
+            <div class="system-visual eval-visual" aria-hidden="true">
+              <div class="eval-source">PM 评测维度</div><span>↓</span>
+              <div class="eval-pair"><b>策略 Evaluator</b><b>SOP Evaluator</b></div><span>↓</span>
+              <div class="eval-result">Candidate v12 · ACCEPTED</div>
+            </div>
+            <div class="system-copy">
+              <p class="project-kicker">AGENT EVOLUTION · TAOTIAN</p>
+              <h3>售后 Agent 自进化控制台</h3>
+              <p>模拟 PM 配置评测维度后，系统如何完成双 Evaluator 归因、双 Reward 打分、受控 Prompt 更新与留出集准入。</p>
+              <div class="metric-row"><span><strong>77% → 93%</strong> SOP 遵循</span><span><strong>86% → 91%</strong> 策略覆盖</span></div>
+              <span class="open-link">进入系统 Demo <b>↗</b></span>
+            </div>
+          </a>
+
+          <a class="system-card compact" href="baidu-demo.html" target="_blank" rel="noreferrer">
+            <div class="system-visual search-visual" aria-hidden="true">
+              <div class="search-query">复杂调研任务</div>
+              <div class="agent-pair"><b>User Agent</b><i>⇄</i><b>Assistant Agent</b></div>
+              <div class="tool-row"><span>通用搜索</span><span>学术</span><span>统计库</span><span>浏览器</span></div>
+            </div>
+            <div class="system-copy">
+              <p class="project-kicker">DEEP SEARCH · BAIDU</p>
+              <h3>渐进式多 Agent 深度搜索</h3>
+              <p>模拟一个跨领域调研任务如何被拆解、调用不同专业工具、根据中间证据动态改写计划，并收敛为结构化报告。</p>
+              <div class="metric-row"><span><strong>98%</strong> 意图识别</span><span><strong>94%</strong> 资源覆盖</span><span><strong>15w+</strong> DAU 场景</span></div>
+              <span class="open-link">进入系统 Demo <b>↗</b></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="portfolio-footer">
+        <p>Designed &amp; built by Yueying Luo · Agent Engineering Portfolio</p>
+        <a href="#about">回到顶部 ↑</a>
+      </footer>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QualityGate Coding Agent｜逐步演示</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="demo-page">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="demo-shell">
+    <aside class="demo-sidebar">
+      <div class="brand"><span class="brand-mark">QG</span><div><strong>QualityGate</strong><small>CODING AGENT WALKTHROUGH</small></div></div>
+      <nav aria-label="演示步骤"><button data-step-target>1. 输入任务</button><button data-step-target>2. 生成 Patch</button><button data-step-target>3. 门禁拦截</button><button data-step-target>4. 自动修复</button><button data-step-target>5. 最终准入</button></nav>
+      <div class="sidebar-run"><span>DEMO RUN</span><strong>QG-240915-07</strong><small>真实评测轨迹 · 静态复现</small></div>
+      <a class="back-link" href="index.html">← 返回研发作品集</a>
+    </aside>
+    <main class="demo-main">
+      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">AI CODING / STEP-BY-STEP</p><h1>看一次代码任务如何穿过质量门禁</h1></div><span class="status-pill">DeepSeek-V4-Flash · 2 轮</span></header>
+      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。任务、Diff 和门禁结果来自项目真实运行，页面不连接 API。</span></div>
+
+      <section class="walkthrough" data-walkthrough>
+        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 05</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>QG-240915-07</span></div>
+        <div class="walkthrough-frame">
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">01</span><div><h2>输入一个明确的代码任务</h2><p>系统复制代码库快照，并把任务交给 Patch 生成后端。</p></div></header>
+            <div class="step-content">
+              <div class="fake-input"><label>ENGINEERING TASK</label><p>实现 <strong>slugify(value)</strong>：转为小写，将连续非字母数字字符替换为一个连字符，并去除首尾连字符；空输入返回空字符串。</p><span class="fake-submit">开始生成 →</span></div>
+              <div class="step-caption"><strong>我实现的入口：</strong>代码库快照、隐藏测试隔离、最大修复轮次和运行目录都在任务开始前固定，保证结果可复现。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">02</span><div><h2>模型生成最小 Unified Diff</h2><p>后端校验 Diff 结构与行数，再用 git apply 写入隔离工作区。</p></div></header>
+            <div class="step-content">
+              <pre class="diff"><span class="info">--- a/slugify.py
++++ b/slugify.py
+@@ -1,2 +1,6 @@</span>
+<span class="add">+import re</span>
+
+ def slugify(value: str) -&gt; str:
+<span class="del">-    return value.lower().replace(" ", "-")</span>
+<span class="add">+    value = value.strip().lower()
++    value = re.sub(r"[^a-z0-9]+", "-", value)
++    return value.strip("-")</span></pre>
+              <div class="step-caption">这段代码功能上是正确的，但“能跑”还不等于“能交付”。下一步进入五级质量门禁。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">03</span><div><h2>测试通过，但 Ruff 拒绝准入</h2><p>五个门禁分别给出可定位的结果，而不是压成一个模糊分数。</p></div></header>
+            <div class="step-content">
+              <div class="gate-grid"><div class="gate-card pass"><span>PYTEST</span><strong>4 / 4 PASS</strong></div><div class="gate-card fail"><span>RUFF</span><strong>BLOCKED</strong></div><div class="gate-card pass"><span>BANDIT</span><strong>PASS</strong></div><div class="gate-card pass"><span>RADON</span><strong>PASS</strong></div><div class="gate-card pass"><span>DIFF SCOPE</span><strong>PASS</strong></div></div>
+              <div class="diagnostic"><strong>lint / I001</strong><code>Import block is un-sorted or un-formatted
+slugify.py:1:1
+help: Organize imports</code></div>
+              <div class="step-caption"><strong>关键机制：</strong>系统把失败命令、错误码、文件位置与修复提示组织成结构化反馈，并保留其他已通过门禁作为约束。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">04</span><div><h2>优先执行确定性修复，再完整回归</h2><p>格式问题无需再次调用大模型，直接由 Ruff 做最小修复。</p></div></header>
+            <div class="step-content">
+              <div class="choice-grid"><div class="focus-card emphasis"><h3>本轮选择：Deterministic Fix</h3><p>检测到 Ruff 可自动修复的 I001，只增加一个空行，不改变业务逻辑。</p></div><div class="focus-card"><h3>复杂失败时：Model Repair</h3><p>若测试、安全或复杂度失败，则把结构化诊断反馈给模型生成下一版 Patch。</p></div></div>
+              <pre class="diff" style="margin-top:14px"><span class="info">@@ -1,5 +1,6 @@</span>
+ import re
+
+<span class="add">+</span>
+ def slugify(value: str) -&gt; str:</pre>
+              <div class="step-caption">修复后不是只重跑 Ruff，而是重新执行 pytest、Ruff、Bandit、Radon 与 Diff Scope，防止局部修复制造新回归。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">05</span><div><h2>五级门禁全通过，候选代码准入</h2><p>完整轨迹、Diff、门禁输出和 token 用量被持久化为报告。</p></div></header>
+            <div class="step-content">
+              <div class="result-strip"><div><span>最终状态</span><strong style="color:var(--accent)">PASSED</strong></div><div><span>执行轮次</span><strong>2</strong></div><div><span>修改范围</span><strong>1 文件</strong></div><div><span>最终门禁</span><strong>5 / 5</strong></div></div>
+              <div class="diagnostic success-box"><strong>✓ Candidate accepted</strong><code>tests=pass · lint=pass · security=pass · complexity=pass · scope=pass</code></div>
+              <div class="step-caption"><strong>固定评测结果：</strong>8 个任务闭环通过率 75.0%，首轮失败任务修复成功率 71.4%，20 个预置缺陷变体全部被对应门禁命中。</div>
+            </div>
+          </article>
+        </div>
+        <div class="walkthrough-actions"><button data-step-prev>← 上一步</button><span class="action-hint">也可以点击左侧步骤直接跳转</span><button data-step-next>下一步 →</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

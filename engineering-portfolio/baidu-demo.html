@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progressive Deep Search｜逐步演示</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="demo-page">
+  <div class="grain" aria-hidden="true"></div>
+  <div class="demo-shell">
+    <aside class="demo-sidebar">
+      <div class="brand"><span class="brand-mark">DS</span><div><strong>Deep Search</strong><small>MULTI-AGENT WALKTHROUGH</small></div></div>
+      <nav aria-label="演示步骤"><button data-step-target>1. 理解复杂意图</button><button data-step-target>2. 拆解搜索计划</button><button data-step-target>3. 调用专业工具</button><button data-step-target>4. 读取证据并调整</button><button data-step-target>5. 生成结构化报告</button></nav>
+      <div class="sidebar-run"><span>DEMO JOB</span><strong>DS-20260915-04</strong><small>脱敏查询 · 静态演示</small></div>
+      <a class="back-link" href="index.html">← 返回研发作品集</a>
+    </aside>
+    <main class="demo-main">
+      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">MULTI-AGENT SEARCH / STEP-BY-STEP</p><h1>看一个复杂调研任务如何逐步搜索并收敛</h1></div><span class="status-pill">User Agent ⇄ Assistant Agent</span></header>
+      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。查询、工具返回和报告均为脱敏示意，不代表实时搜索结果。</span></div>
+
+      <section class="walkthrough" data-walkthrough>
+        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 05</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>DS-20260915-04</span></div>
+        <div class="walkthrough-frame">
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">01</span><div><h2>识别为“跨领域研报”任务</h2><p>意图分类决定 Prompt、SOP、必达信息、终止条件与报告模板。</p></div></header>
+            <div class="step-content">
+              <div class="fake-input"><label>USER QUERY</label><p>梳理国内具身智能产业链，比较三类厂商的商业化路径，并结合融资、论文和政策信息，给出值得继续跟踪的信号。</p><span class="fake-submit">开始深度搜索 →</span></div>
+              <div class="choice-grid" style="margin-top:14px"><div class="focus-card emphasis"><h3>识别结果：行业研究</h3><p>置信度 0.96 · 启用研报 SOP 与多领域工具集。</p></div><div class="focus-card"><h3>完成条件</h3><p>产业链、厂商路径、商业证据、技术与政策信号均需覆盖。</p></div></div>
+              <div class="step-caption"><strong>系统能力：</strong>不是所有问题共用一条固定链路，而是由意图分类动态配置执行路径。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">02</span><div><h2>User Agent 把目标拆成四个可验证子任务</h2><p>规划者负责“接下来查什么”和“什么时候完成”，不直接操作工具。</p></div></header>
+            <div class="step-content">
+              <div class="trace-mini"><article><span>SUBTASK 01</span><p><strong>建立产业链框架：</strong>上游零部件与算力、中游本体与控制、下游应用场景。</p></article><article><span>SUBTASK 02</span><p><strong>比较三类厂商：</strong>本体厂商、模型平台、场景方案商的产品和收入路径。</p></article><article><span>SUBTASK 03</span><p><strong>补充商业证据：</strong>融资、订单、客户类型与规模化交付信号。</p></article><article><span>SUBTASK 04</span><p><strong>补充技术证据：</strong>论文方法、训练数据、指标局限与政策方向。</p></article></div>
+              <div class="step-caption"><strong>Plan–Execute 解耦：</strong>User Agent 只发出高层语义指令，Assistant Agent 自主选择工具并返回标准化 Observation。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">03</span><div><h2>Assistant Agent 为不同子任务选择专业工具</h2><p>统一工具抽象层屏蔽数据源之间的调用格式和失败差异。</p></div></header>
+            <div class="step-content">
+              <div class="simple-flow"><div class="flow-node active"><b>通用搜索</b>行业结构<br>应用场景</div><div class="flow-node"><b>统计数据库</b>政策原文<br>产业数据</div><div class="flow-node"><b>财务数据库</b>融资轮次<br>商业订单</div><div class="flow-node"><b>学术论文</b>方法指标<br>实验局限</div><div class="flow-node"><b>浏览器</b>动态网页<br>内容抽取</div></div>
+              <div class="focus-card" style="margin-top:16px"><h3>统一 Observation</h3><p><code>{ title, source, publish_date, snippet, evidence_type, confidence }</code></p></div>
+              <div class="step-caption"><strong>我做的工程抽象：</strong>将通用搜索、财务、权威统计、论文、网页抓取与浏览器自动化封装为标准接口，Agent 可以组合调用。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">04</span><div><h2>User Agent 读取中间证据并改写后续计划</h2><p>渐进式搜索的关键不是多搜几次，而是根据缺口动态调整方向。</p></div></header>
+            <div class="step-content">
+              <div class="trace-mini"><article><span>TURN 02 · READ</span><p>产业链结构已覆盖，但“商业化路径”仍只有二手观点，缺少融资与客户证据。</p></article><article><span>REPLAN</span><p>暂停泛化搜索，新增财务数据库与厂商公开页面检索，按公司、日期和客户类型归一化。</p></article><article><span>TURN 04 · READ</span><p>商业证据满足，但技术趋势缺少一手实验依据；新增近两年论文检索。</p></article><article><span>STOP CHECK</span><p>四项必达信息均有多源证据，冲突已标记，达到报告模板要求，终止搜索。</p></article></div>
+              <div class="step-caption"><strong>终止机制：</strong>完成度判断结合任务必达信息、差异化终止条件与共享最大轮数，避免循环和无效过度搜索。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">05</span><div><h2>把搜索轨迹收敛为带来源的结构化报告</h2><p>报告按预设模板组织结论、对比维度、风险信号与证据引用。</p></div></header>
+            <div class="step-content">
+              <div class="report-preview"><span class="source-chip">REPORT PREVIEW</span><h3>国内具身智能产业链与商业化路径观察</h3><h4>三类商业化路径</h4><ul><li><strong>本体厂商：</strong>关注硬件成本下降与交付复制性。</li><li><strong>模型平台：</strong>关注数据闭环和跨本体迁移能力。</li><li><strong>场景方案商：</strong>关注客户续约与非标实施比例。</li></ul><h4>继续跟踪的信号</h4><p>真实任务成功率、单位任务成本、数据闭环效率与规模化订单质量。</p><p><span class="source-chip">[S1]</span> 政策原文　<span class="source-chip">[S2]</span> 厂商材料　<span class="source-chip">[S3]</span> 学术论文</p></div>
+              <div class="result-strip" style="margin-top:16px"><div><span>意图识别准确率</span><strong>98%</strong></div><div><span>资源覆盖率</span><strong>94%</strong></div><div><span>覆盖提升</span><strong>+27%</strong></div><div><span>落地场景 DAU</span><strong>15w+</strong></div></div>
+              <div class="step-caption"><strong>我的工作：</strong>参与复杂意图理解、任务拆解、工具调用和信息迭代整合链路；设计双智能体协作、差异化执行路径并统一接入专业工具。</div>
+            </div>
+          </article>
+        </div>
+        <div class="walkthrough-actions"><button data-step-prev>← 上一步</button><span class="action-hint">侧栏可直接跳转到任一步骤</span><button data-step-next>下一步 →</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
