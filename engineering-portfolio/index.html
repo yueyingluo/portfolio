@@ -135,6 +135,59 @@
       </footer>
     </div>
   </main>
-  <script src="script.js"></script>
+
+  <div class="guide-overlay" aria-hidden="true" inert>
+    <section class="guide-card" role="dialog" aria-modal="true" aria-labelledby="guide-title">
+      <header class="guide-header">
+        <span class="guide-counter">1 / 4</span>
+        <button class="guide-skip" type="button">跳过</button>
+      </header>
+      <div class="guide-slides">
+        <article class="guide-slide active" data-guide-slide="0">
+          <div class="guide-visual welcome-visual" aria-hidden="true"><span class="welcome-core">DEV</span><i></i><i></i><i></i><b></b></div>
+          <p class="guide-kicker">欢迎</p><h2 id="guide-title">从生成，走到可交付。</h2><p class="guide-copy">这份研发作品集关注 Agent 如何穿过真实工程流程：执行、评测、修复，再由质量门禁决定是否准入。</p>
+        </article>
+        <article class="guide-slide" data-guide-slide="1">
+          <div class="guide-visual project-visual" aria-hidden="true"><div class="mini-project"><span>01 — 03</span><strong>三个可展开的系统实例</strong><i></i><i></i><i></i></div><div class="mini-cursor">↖</div></div>
+          <p class="guide-kicker">系统演示</p><h2>选择一个 Demo，逐步推进。</h2><p class="guide-copy">点击系统卡片后会在新标签页打开五步演示。每一步只解释一个关键动作，并呈现输入、状态变化和输出。</p>
+        </article>
+        <article class="guide-slide" data-guide-slide="2">
+          <div class="guide-visual chat-visual" aria-hidden="true"><div class="mini-chat"><span>AI</span><p></p><p></p><b><i></i><i></i><i></i></b></div></div>
+          <p class="guide-kicker">随时追问</p><h2>让 AI 助手补充技术细节。</h2><p class="guide-copy">右下角可以追问系统架构、算法机制、指标口径和个人负责范围。回答由 DeepSeek 驱动，并基于作品集公开信息。</p>
+        </article>
+        <article class="guide-slide" data-guide-slide="3">
+          <div class="guide-visual gate-visual" aria-hidden="true"><span>TEST ✓</span><span>RUFF ✓</span><span>SEC ✓</span><span>CC ✓</span><span>DIFF ✓</span></div>
+          <p class="guide-kicker">推荐入口</p><h2>先看可验证 AI Coding Agent。</h2><p class="guide-copy">从一次代码任务出发，观察 Patch 如何被执行、诊断和修复，再通过五级质量门禁。之后可继续查看淘天与百度系统。</p>
+        </article>
+      </div>
+      <footer class="guide-footer">
+        <button class="guide-prev" type="button" aria-label="上一步">←</button>
+        <div class="guide-dots" aria-label="导览进度"><button class="active" type="button" aria-label="第 1 步"></button><button type="button" aria-label="第 2 步"></button><button type="button" aria-label="第 3 步"></button><button type="button" aria-label="第 4 步"></button></div>
+        <button class="guide-next" type="button">下一步 <span>→</span></button>
+      </footer>
+    </section>
+  </div>
+
+  <aside class="ai-assistant" data-endpoint="https://yueying-portfolio-assistant.laurenluo05.workers.dev/chat" aria-label="研发作品集 AI 助手">
+    <button class="guide-reopen" type="button" aria-label="重新查看网站导览" title="重新查看网站导览">?</button>
+    <button class="ai-launcher" type="button" aria-expanded="false" aria-controls="ai-panel">
+      <span class="ai-launcher-pulse" aria-hidden="true"></span><span class="ai-launcher-mark" aria-hidden="true">AI</span><span class="ai-launcher-label">问问 AI</span>
+    </button>
+    <section class="ai-panel" id="ai-panel" aria-hidden="true">
+      <header class="ai-panel-header">
+        <div class="ai-identity"><span class="ai-avatar">AI</span><div><strong>研发项目助手</strong><span class="ai-status"><i></i> DeepSeek 驱动</span></div></div>
+        <button class="ai-close" type="button" aria-label="关闭助手">×</button>
+      </header>
+      <div class="ai-thread" role="log" aria-live="polite"></div>
+      <div class="ai-prompts" aria-label="推荐问题"></div>
+      <form class="ai-form">
+        <textarea class="ai-input" rows="1" maxlength="600" placeholder="询问系统设计、指标或负责范围…" aria-label="向研发项目助手提问"></textarea>
+        <button class="ai-send" type="submit" aria-label="发送问题"><span>↑</span></button>
+      </form>
+      <p class="ai-disclaimer">回答仅基于作品集公开信息，不包含内部或保密内容。</p>
+    </section>
+  </aside>
+
+  <script src="script.js?v=20260915-guide-ai-v1"></script>
 </body>
 </html>

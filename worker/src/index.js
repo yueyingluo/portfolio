@@ -4,13 +4,13 @@ const PORTFOLIO_KNOWLEDGE = `
 PUBLIC PROFILE
 - Name: Yueying Luo / 罗玥萦.
 - Undergraduate in Artificial Intelligence at Peking University; expected graduation June 2027.
-- Focus: foundation models, LLM post-training, agent systems, AI search, active retrieval and evaluation.
-- Target roles: applied LLM algorithm and Agent algorithm opportunities.
+- Focus: LLM post-training, agent systems, AI search, active retrieval, AI Coding and evaluation-driven engineering workflows.
+- Target roles: applied LLM / Agent algorithm and Agent engineering opportunities.
 - Contact: luoyueying@stu.pku.edu.cn; phone / WeChat 18028356417; GitHub https://github.com/yueyingluo.
 - Personal description: strongly curious and self-driven; starts from real needs, proactively explores industry developments, and enjoys cross-team collaboration that turns technology into practical value.
 
 EXPERIENCE ORDER
-1. Intelligent Service Algorithm Intern, Taotian Group Intelligent Service Department, June 2026–present.
+1. Intelligent Customer Service Algorithm R&D Intern, Taotian Group Intelligent Service Department, June 2026–present.
 2. AI Strategy Intern, Baidu, December 2025–May 2026.
 3. Research Intern, Peking University Wangxuan Institute of Computer Technology, March–August 2025.
 
@@ -54,6 +54,17 @@ PROJECT 3 — LEGAL ACTIVE-RETRIEVAL AGENT
 - Result: best PPO configuration improved jecqa Accuracy by 5 percentage points over baseline.
 - Why PPO may have worked here: it directly optimizes scalar trajectory rewards with a value baseline and supports stable on-policy credit assignment across multi-step search interactions. This is a reasoned project interpretation, not a universal theorem.
 - Yueying built the legal corpus and retrieval environment, constructed SFT data, designed rewards and ablations, compared post-training algorithms, and diagnosed SFT/RL workflow mismatch.
+
+PROJECT 4 — QUALITYGATE CODING AGENT
+- Positioning: a personal engineering project built on mini-SWE-agent to turn one-shot code generation into a verifiable repair-and-gate workflow. The model used for the fixed benchmark was DeepSeek-V4-Flash.
+- End-to-end flow: create a repository snapshot; ask the Agent for a structured unified Patch; validate and apply the Patch; execute it in an isolated environment; persist results; expose task creation, status and report endpoints through FastAPI; visualize repair trajectories, code Diff and gate diagnostics in a Web interface.
+- Closed loop: Generate → Execute → Evaluate → Repair → Gate, with at most three attempts. Failed commands, stack traces and exact violation locations are converted into structured feedback for the next model attempt. Deterministic fixes such as safe Ruff auto-fixes can be applied when appropriate.
+- Five quality dimensions: pytest for functional correctness; Ruff for code style and static-quality issues; Bandit for common Python security risks; Radon for cyclomatic-complexity limits; git diff checks for modification scope.
+- Reproducible benchmark: eight fixed Python tasks covering feature addition, bug fixing, edge cases and refactoring. First-attempt pass rate was 12.5% (1/8); final closed-loop pass rate was 75.0% (6/8); five of seven initially failing tasks were repaired, so automatic repair success was 71.4%; average attempts were 2.62.
+- Gate audit: twenty fixed, pre-seeded defect variants across the five gate categories were each detected by the expected gate, reported as 20/20 or 100% on that controlled audit. This is not a claim that every possible defect can be detected.
+- Two benchmark tasks, duration_parser and dependency_sort, remained blocked after the repair budget; the project does not claim universal repair success.
+- Isolation boundary: the implementation supports Docker/Linux isolation and a macOS sandbox fallback. The reported local benchmark used the macOS sandbox fallback because Docker Desktop was unavailable during that run; do not imply that all reported runs used Docker.
+- Yueying's ownership: system architecture, closed-loop orchestration, structured Patch validation, five-level quality-gate integration, feedback construction, FastAPI/Web presentation, benchmark design and result analysis.
 `;
 
 const SYSTEM_PROMPT = `You are the AI portfolio assistant for Yueying Luo. Answer questions from interviewers and visitors using only the public portfolio knowledge below.
