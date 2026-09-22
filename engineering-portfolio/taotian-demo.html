@@ -14,7 +14,7 @@
       <div class="brand"><span class="brand-mark">AE</span><div><strong>Agent Evolution</strong><small>EVALUATE · ROUTE · OPTIMIZE</small></div></div>
       <nav aria-label="演示步骤"><button data-step-target>1. PM 配置评测</button><button data-step-target>2. 遵循率根因路由</button><button data-step-target>3. 优化执行 Prompt</button><button data-step-target>4. 发现策略缺口</button><button data-step-target>5. 验证候选 Rubric</button><button data-step-target>6. 改写策略并准入</button></nav>
       <div class="sidebar-run"><span>DEMO JOB</span><strong>EVO-240922-16</strong><small>静态案例 · 六步演示</small></div>
-      <a class="back-link" href="index.html">← 返回研发作品集</a>
+      <a class="back-link" href="https://yueyingluo.github.io/portfolio/">← 返回个人主页</a>
     </aside>
     <main class="demo-main">
       <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">AFTER-SALES AGENT / STEP-BY-STEP</p><h1>先判断 Agent 没执行好，还是策略本身不够好</h1></div><span class="status-pill">Adherence → Policy Gap</span></header>
@@ -44,7 +44,7 @@
           <article class="walk-step" data-walk-step>
             <header class="step-heading"><span class="step-number">03</span><div><h2>PATH A：把低遵循样本转成执行修复</h2><p>Evaluator 指出具体失败节点，受控更新引擎只修改被证据支持的规则。</p></div></header>
             <div class="step-content">
-              <div class="metric-table"><div class="metric-row-head"><span>评测维度</span><span>得分</span><span>诊断</span></div><div><span>推理一致性</span><strong>2.1 / 5</strong><p>没有读取已有举证状态</p></div><div><span>方案准确性</span><strong>2.4 / 5</strong><p>错误回退到材料收集节点</p></div><div><span>话术合理性</span><strong>4.1 / 5</strong><p>表达正常，不是主要问题</p></div><div><span>SOP 完整性</span><strong>1.8 / 5</strong><p>责任判断节点没有执行</p></div></div>
+              <div class="metric-table"><div class="metric-row-head"><span>评测维度</span><span>得分</span><span>诊断</span></div><div><span>推理一致性</span><strong>2 / 5</strong><p>没有读取已有举证状态</p></div><div><span>方案准确性</span><strong>2 / 5</strong><p>错误回退到材料收集节点</p></div><div><span>话术合理性</span><strong>4 / 5</strong><p>表达正常，不是主要问题</p></div><div><span>SOP 完整性</span><strong>2 / 5</strong><p>责任判断节点没有执行</p></div></div>
               <div class="prompt-diff" style="margin-top:14px"><div class="prompt-version"><span>CURRENT / v11</span><p>商品破损时，要求用户上传外包装与商品照片。</p></div><div class="prompt-version new"><span>CANDIDATE / v12 · ADD</span><p>执行举证节点前先读取已有材料；材料齐全时不得重复索取，直接进入责任判断。</p></div></div>
               <div class="step-caption"><strong>受控更新：</strong>失败命令被组织成 Add / Delete / Replace 操作，候选 Prompt 不直接覆盖线上版本，必须先进入留出集回归。</div>
             </div>
@@ -63,7 +63,7 @@
           <article class="walk-step" data-walk-step>
             <header class="step-heading"><span class="step-number">05</span><div><h2>验证 Rubric 的区分度、稳定性与非冗余性</h2><p>候选维度不会因为由 LLM 提出就直接进入策略改写。</p></div></header>
             <div class="step-content">
-              <div class="validation-cards"><article><span>01 · DISCRIMINATION</span><h3>是否真实区分 Agent 与人工</h3><div><b>+1.26</b> 人工−Agent 差值</div><div><b>82%</b> 人工胜率</div><div><b>[1.02, 1.47]</b> Bootstrap 95% CI</div><small>Wilcoxon 配对检验通过</small></article><article><span>02 · STABILITY</span><h3>重复评分是否一致</h3><div><b>0.82</b> Krippendorff Alpha</div><div><b>0.21</b> 平均样本内标准差</div><div><b>0.76</b> 人工校准 Kappa</div><small>三次随机种子复评</small></article><article><span>03 · REDUNDANCY</span><h3>多个维度是否重复</h3><div><b>0.91</b> 文本相似度</div><div><b>0.87</b> 评分 Spearman 相关</div><div><b>MERGE</b> 合并建议</div><small>R2 + R4 → 处置成本合理性</small></article></div>
+              <div class="validation-cards"><article><span>01 · DISCRIMINATION</span><h3>是否真实区分 Agent 与人工</h3><div><b>+1.26</b> 人工−Agent 差值</div><div><b>82%</b> 人工胜率</div><div><b>[1.02, 1.47]</b> Bootstrap 95% CI</div><code>Δ = Σ(Hᵢ − Aᵢ) / N<br>WinRate = Σ𝟙(Hᵢ &gt; Aᵢ) / N</code><small>Wilcoxon 配对检验通过</small></article><article><span>02 · STABILITY</span><h3>重复评分是否一致</h3><div><b>0.82</b> Krippendorff Alpha</div><div><b>0.21</b> 平均样本内标准差</div><div><b>0.76</b> 人工校准 Kappa</div><code>α = 1 − Dₒ / Dₑ<br>σ̄ = Σ std(sᵢ¹…sᵢᴷ) / N</code><small>三次随机种子复评</small></article><article><span>03 · REDUNDANCY</span><h3>多个维度是否重复</h3><div><b>0.91</b> 文本相似度</div><div><b>0.87</b> 评分 Spearman 相关</div><div><b>MERGE</b> 合并建议</div><code>cos(u,v) = u·v / ‖u‖‖v‖<br>ρₛ = corr(rank x, rank y)</code><small>R2 + R4 → 处置成本合理性</small></article></div>
               <div class="keep-row"><span>最终保留</span><b>比例化处置能力</b><b>处置成本合理性</b><b>已有举证复用能力</b></div>
               <div class="step-caption"><strong>示例批次：</strong>统计数值用于展示评测方法；实际生产中阈值由标注校准、样本规模和业务风险共同确定。</div>
             </div>

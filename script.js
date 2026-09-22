@@ -21,10 +21,10 @@ const copy = {
   },
   zh: {
     name: '罗玥萦<span>.</span>', phoneLink: '手机 / 微信 · 18028356417', eyebrow: '个人作品集 / 2026', contactInvite: '如果你正在寻找认真又有创造力的技术伙伴、手里有一个值得投入的机会，或者只是想聊聊大模型与 Agent，欢迎来找我交换想法。',
-    role: '北京大学人工智能本科生，专注于智能体系统与大模型算法。', navAbout: '关于我', navExperience: '经历', navWork: '代表工作',
+    role: '北京大学人工智能本科生，专注于智能体系统与大模型应用。', navAbout: '关于我', navExperience: '经历', navWork: '代表工作',
     aboutTitle: '我关心智能系统如何真正解决现实问题。',
     aboutP1: '我是北京大学人工智能专业本科生，预计于 2027 年 6 月毕业，关注基础模型、智能体系统与后训练。我喜欢把模糊的真实需求转化为可靠、可落地的技术产品。',
-    aboutP2: '近期工作涉及 Agent 自进化、AI 搜索、主动检索与评测。我正在寻找大模型算法与 Agent 方向的工作机会。',
+    aboutP2: '近期工作涉及 Agent 自进化、AI 搜索、主动检索与评测。我正在寻找大模型与 Agent 方向的工作机会。',
     factSchoolLabel: '教育经历', factSchool: '北京大学', factMajorLabel: '关注方向', factMajor: '人工智能 · 基础模型 · 智能体', factDateLabel: '预计毕业', factDate: '2027 年 6 月',
     experienceTitle: '实习与研究经历', experienceNote: '构建能够检索、推理并持续优化的系统。',
     taotianDate: '2026 年 6 月 — 至今', taotianTitle: '智能服务算法实习生 <span>@ 淘天集团 · 智能服务部</span>', taotianBody: '面向售后纠纷的平台介入场景，从 0 到 1 构建自进化 Agent，将服务策略优化与策略遵循优化解耦。',
@@ -37,7 +37,7 @@ const copy = {
     project1Kicker: 'AGENT 自进化 · 淘天', project1Title: '面向售后平台介入的自进化 Agent', project1Body: '一套双目标反馈闭环：持续优化服务策略，同时让 Agent 更稳定地遵循既有 SOP。', project1Metric1: 'SOP 遵循率：77% → 93%', project1Metric2: '策略覆盖率：86% → 91%',
     project2Kicker: 'AI 搜索 · 百度', project2Title: '直接搜索与深度搜索协同的分层 AI 搜索', project2Body: '通过意图分流，将 Query 改写与重排用于快速搜索，并以多 Agent 渐进式搜索处理复杂任务。', project2Metric1: '优质率 79%', project2Metric2: '可用率 94%',
     project3Kicker: '应用研究 · 主动检索', project3Title: '训练具备主动检索能力的法律问答 Agent', project3Body: '基于 Qwen2.5-7B，通过 SFT + RL 训练模型在法律知识上交替完成推理、检索与回答。', project3Metric1: '1,300+ 法律文档', project3Metric2: 'Accuracy +5 pp',
-    footer: '由罗玥萦设计与开发。期待大模型算法与 Agent 方向机会。'
+    footer: '由罗玥萦设计与开发。期待大模型与 Agent 方向机会。'
   }
 };
 
