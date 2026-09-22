@@ -51,7 +51,8 @@ document.querySelectorAll('[data-walkthrough]').forEach(walkthrough => {
   targets.forEach((target, index) => target.addEventListener('click', () => show(index)));
   previous?.addEventListener('click', () => show(current - 1));
   next?.addEventListener('click', () => show(current + 1));
-  show(0);
+  const requestedStep = Number.parseInt(new URLSearchParams(window.location.search).get('step'), 10);
+  show(Number.isInteger(requestedStep) ? requestedStep - 1 : 0);
 });
 
 const guideOverlay = document.querySelector('.guide-overlay');

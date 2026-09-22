@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Progressive Deep Search｜逐步演示</title>
+  <title>Progressive Resource Search｜逐步演示</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
@@ -11,58 +11,73 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="demo-shell">
     <aside class="demo-sidebar">
-      <div class="brand"><span class="brand-mark">DS</span><div><strong>Deep Search</strong><small>MULTI-AGENT WALKTHROUGH</small></div></div>
-      <nav aria-label="演示步骤"><button data-step-target>1. 理解复杂意图</button><button data-step-target>2. 拆解搜索计划</button><button data-step-target>3. 调用专业工具</button><button data-step-target>4. 读取证据并调整</button><button data-step-target>5. 生成结构化报告</button></nav>
-      <div class="sidebar-run"><span>DEMO JOB</span><strong>DS-20260915-04</strong><small>脱敏查询 · 静态演示</small></div>
+      <div class="brand"><span class="brand-mark">DS</span><div><strong>Deep Search</strong><small>RESOURCE SEARCH WALKTHROUGH</small></div></div>
+      <nav aria-label="演示步骤"><button data-step-target>1. 开放式探索</button><button data-step-target>2. 加载资源 SOP</button><button data-step-target>3. 广泛召回</button><button data-step-target>4. 定向验证与重规划</button><button data-step-target>5. 排序与停止判断</button><button data-step-target>6. 输出资源卡片</button></nav>
+      <div class="sidebar-run"><span>DEMO JOB</span><strong>DS-20260922-07</strong><small>静态案例 · 六步演示</small></div>
       <a class="back-link" href="index.html">← 返回研发作品集</a>
     </aside>
     <main class="demo-main">
-      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">MULTI-AGENT SEARCH / STEP-BY-STEP</p><h1>看一个复杂调研任务如何逐步搜索并收敛</h1></div><span class="status-pill">User Agent ⇄ Assistant Agent</span></header>
-      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。查询、工具返回和报告均为脱敏示意，不代表实时搜索结果。</span></div>
+      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">MULTI-AGENT RESOURCE SEARCH / STEP-BY-STEP</p><h1>从一个模糊 Query，逐轮收敛到可用的《甄嬛传》资源</h1></div><span class="status-pill">User Agent ⇄ Assistant Agent</span></header>
+      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。资源、状态和评分为机制演示，不连接真实生产数据，也不提供真实网盘分享地址。</span></div>
 
       <section class="walkthrough" data-walkthrough>
-        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 05</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>DS-20260915-04</span></div>
+        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 06</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>DS-20260922-07</span></div>
         <div class="walkthrough-frame">
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">01</span><div><h2>识别为“跨领域研报”任务</h2><p>意图分类决定 Prompt、SOP、必达信息、终止条件与报告模板。</p></div></header>
+            <header class="step-heading"><span class="step-number">01</span><div><h2>先探索，再确认用户到底在找什么</h2><p>“全集、高清、在线观看”提供了视频线索，但作品版本和资源边界仍需搜索证据确认。</p></div></header>
             <div class="step-content">
-              <div class="fake-input"><label>USER QUERY</label><p>梳理国内具身智能产业链，比较三类厂商的商业化路径，并结合融资、论文和政策信息，给出值得继续跟踪的信号。</p><span class="fake-submit">开始深度搜索 →</span></div>
-              <div class="choice-grid" style="margin-top:14px"><div class="focus-card emphasis"><h3>识别结果：行业研究</h3><p>置信度 0.96 · 启用研报 SOP 与多领域工具集。</p></div><div class="focus-card"><h3>完成条件</h3><p>产业链、厂商路径、商业证据、技术与政策信号均需覆盖。</p></div></div>
-              <div class="step-caption"><strong>系统能力：</strong>不是所有问题共用一条固定链路，而是由意图分类动态配置执行路径。</div>
+              <div class="fake-input"><label>USER QUERY</label><p>帮我找《甄嬛传》全集高清资源，最好能直接在线观看。</p><span class="fake-submit">开始开放式探索 →</span></div>
+              <div class="query-run"><span>甄嬛传 是什么</span><span>甄嬛传 资源</span><span>甄嬛传 百度网盘</span></div>
+              <div class="entity-panel"><div><span>初步推断</span><strong>影视内容 · 0.86</strong><small>来自“全集 / 高清 / 在线观看”</small></div><i>→</i><div class="confirmed"><span>搜索确认</span><strong>2011 年电视剧 · 0.96</strong><small>原版 76 集《后宫·甄嬛传》</small></div></div>
+              <div class="chip-row"><span class="active">保留：1—76 集正片</span><span>排除：小说</span><span>排除：剧情解说</span><span>排除：剪辑 / 短视频</span></div>
+              <div class="step-caption"><strong>关键机制：</strong>系统不会把作品名直接等同于某种资源，而是结合 Query 先验与首轮结果完成实体消歧，再确定后续执行路径。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">02</span><div><h2>User Agent 把目标拆成四个可验证子任务</h2><p>规划者负责“接下来查什么”和“什么时候完成”，不直接操作工具。</p></div></header>
+            <header class="step-heading"><span class="step-number">02</span><div><h2>确认影视任务后，动态加载资源搜索 SOP</h2><p>不同资源类型使用不同的必达信息、验证动作与终止条件。</p></div></header>
             <div class="step-content">
-              <div class="trace-mini"><article><span>SUBTASK 01</span><p><strong>建立产业链框架：</strong>上游零部件与算力、中游本体与控制、下游应用场景。</p></article><article><span>SUBTASK 02</span><p><strong>比较三类厂商：</strong>本体厂商、模型平台、场景方案商的产品和收入路径。</p></article><article><span>SUBTASK 03</span><p><strong>补充商业证据：</strong>融资、订单、客户类型与规模化交付信号。</p></article><article><span>SUBTASK 04</span><p><strong>补充技术证据：</strong>论文方法、训练数据、指标局限与政策方向。</p></article></div>
-              <div class="step-caption"><strong>Plan–Execute 解耦：</strong>User Agent 只发出高层语义指令，Assistant Agent 自主选择工具并返回标准化 Observation。</div>
+              <div class="sop-list"><article><b>01</b><span>识别名称、别名、年份与集数</span></article><article><b>02</b><span>并行搜索公网播放页与百度网盘资源索引</span></article><article><b>03</b><span>验证是否为正片，排除解说与剪辑</span></article><article><b>04</b><span>核验集数覆盖、链接状态、清晰度与访问限制</span></article><article><b>05</b><span>归并转载、重复页面与同源资源包</span></article><article><b>06</b><span>根据缺口补搜，满足条件或达到五轮后停止</span></article></div>
+              <div class="stop-grid"><div><span>ENTITY</span><strong>置信度 ≥ 0.90</strong></div><div><span>USABLE SOURCES</span><strong>至少 2 个</strong></div><div><span>EPISODES</span><strong>至少 1 个 76/76</strong></div><div><span>CONSTRAINTS</span><strong>限制已标记</strong></div></div>
+              <div class="step-caption"><strong>Plan–Execute 解耦：</strong>User Agent 维护 SOP 与完成状态；Assistant Agent 接收高层指令，自主组合搜索、网盘检索和页面读取工具。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">03</span><div><h2>Assistant Agent 为不同子任务选择专业工具</h2><p>统一工具抽象层屏蔽数据源之间的调用格式和失败差异。</p></div></header>
+            <header class="step-heading"><span class="step-number">03</span><div><h2>第一轮广泛召回：公网与网盘并行搜索</h2><p>这一轮的目标是提高覆盖率，不急于给出最终答案。</p></div></header>
             <div class="step-content">
-              <div class="simple-flow"><div class="flow-node active"><b>通用搜索</b>行业结构<br>应用场景</div><div class="flow-node"><b>统计数据库</b>政策原文<br>产业数据</div><div class="flow-node"><b>财务数据库</b>融资轮次<br>商业订单</div><div class="flow-node"><b>学术论文</b>方法指标<br>实验局限</div><div class="flow-node"><b>浏览器</b>动态网页<br>内容抽取</div></div>
-              <div class="focus-card" style="margin-top:16px"><h3>统一 Observation</h3><p><code>{ title, source, publish_date, snippet, evidence_type, confidence }</code></p></div>
-              <div class="step-caption"><strong>我做的工程抽象：</strong>将通用搜索、财务、权威统计、论文、网页抓取与浏览器自动化封装为标准接口，Agent 可以组合调用。</div>
+              <div class="agent-command"><span>USER AGENT · PLAN</span><p>确认全集数量，召回可在线观看页面和百度网盘内的完整资源包。</p></div>
+              <div class="query-run"><span>甄嬛传 2011 76集 在线观看</span><span>后宫甄嬛传 全集 播放</span><span>甄嬛传 E01-E76 1080P 百度网盘</span></div>
+              <div class="recall-grid"><article><span>WEB SEARCH</span><strong>优酷 · 76 集全</strong><p>发现正片页，会员范围待验证。</p></article><article><span>WEB SEARCH</span><strong>iQIYI · 1—76 集</strong><p>发现完整列表，地域状态待验证。</p></article><article><span>WEB SEARCH</span><strong>乐视官方频道</strong><p>发现正片与播放列表候选。</p></article><article><span>NETDISK SEARCH</span><strong>资源包 A · 76 个视频</strong><p>文件名连续性与链接状态待验证。</p></article></div>
+              <div class="completion-board"><span>作品身份 <b>已确认</b></span><span>候选来源 <b>已发现</b></span><span>全集覆盖 <b class="pending">部分确认</b></span><span>访问限制 <b class="pending">未确认</b></span><span>网盘可用性 <b class="pending">未确认</b></span></div>
+              <div class="step-caption"><strong>完成度判断：</strong>候选结果虽然足够多，但可用性证据还不完整，因此 User Agent 不输出答案，而是进入验证轮。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">04</span><div><h2>User Agent 读取中间证据并改写后续计划</h2><p>渐进式搜索的关键不是多搜几次，而是根据缺口动态调整方向。</p></div></header>
+            <header class="step-heading"><span class="step-number">04</span><div><h2>第二、三轮：读取结果，发现缺口，再改写计划</h2><p>后一轮 Query 由上一轮没有满足的字段生成，而不是重复搜索相同关键词。</p></div></header>
             <div class="step-content">
-              <div class="trace-mini"><article><span>TURN 02 · READ</span><p>产业链结构已覆盖，但“商业化路径”仍只有二手观点，缺少融资与客户证据。</p></article><article><span>REPLAN</span><p>暂停泛化搜索，新增财务数据库与厂商公开页面检索，按公司、日期和客户类型归一化。</p></article><article><span>TURN 04 · READ</span><p>商业证据满足，但技术趋势缺少一手实验依据；新增近两年论文检索。</p></article><article><span>STOP CHECK</span><p>四项必达信息均有多源证据，冲突已标记，达到报告模板要求，终止搜索。</p></article></div>
-              <div class="step-caption"><strong>终止机制：</strong>完成度判断结合任务必达信息、差异化终止条件与共享最大轮数，避免循环和无效过度搜索。</div>
+              <div class="round-timeline"><article><span>ROUND 02 · VERIFY WEB</span><div><strong>站点定向搜索与页面读取</strong><p>优酷覆盖 76 集但后段存在 VIP；iQIYI 列出 1—76 集但当前地区受限；乐视频道需要确认播放列表完整度。</p><code>site:v.youku.com 甄嬛传 76集全</code></div></article><article><span>ROUND 02 · VERIFY NETDISK</span><div><strong>读取资源目录与文件元数据</strong><p>资源包 A 链接有效，E01—E76 连续，均为 MP4；资源包 B 只有 72 集，缺少 E19、E20、E53、E54。</p><code>{ coverage: "76/76", format: "MP4", status: "active" }</code></div></article><article><span>ROUND 03 · REPLAN</span><div><strong>只针对未解决缺口补搜</strong><p>验证乐视列表覆盖；补查网盘缺失集数；寻找带字幕的第二个完整资源包。</p><code>甄嬛传 E19 E20 E53 E54 网盘</code></div></article></div>
+              <div class="step-caption"><strong>渐进式搜索：</strong>搜索 → 读取 → 计算缺口 → 生成下一轮任务，直到资源完整度和可访问性满足 SOP。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">05</span><div><h2>把搜索轨迹收敛为带来源的结构化报告</h2><p>报告按预设模板组织结论、对比维度、风险信号与证据引用。</p></div></header>
+            <header class="step-heading"><span class="step-number">05</span><div><h2>对资源打分、去重，并执行停止判断</h2><p>把“搜索到了”转换成“这个结果为什么值得排在前面”。</p></div></header>
             <div class="step-content">
-              <div class="report-preview"><span class="source-chip">REPORT PREVIEW</span><h3>国内具身智能产业链与商业化路径观察</h3><h4>三类商业化路径</h4><ul><li><strong>本体厂商：</strong>关注硬件成本下降与交付复制性。</li><li><strong>模型平台：</strong>关注数据闭环和跨本体迁移能力。</li><li><strong>场景方案商：</strong>关注客户续约与非标实施比例。</li></ul><h4>继续跟踪的信号</h4><p>真实任务成功率、单位任务成本、数据闭环效率与规模化订单质量。</p><p><span class="source-chip">[S1]</span> 政策原文　<span class="source-chip">[S2]</span> 厂商材料　<span class="source-chip">[S3]</span> 学术论文</p></div>
-              <div class="result-strip" style="margin-top:16px"><div><span>意图识别准确率</span><strong>98%</strong></div><div><span>资源覆盖率</span><strong>94%</strong></div><div><span>覆盖提升</span><strong>+27%</strong></div><div><span>落地场景 DAU</span><strong>15w+</strong></div></div>
-              <div class="step-caption"><strong>我的工作：</strong>参与复杂意图理解、任务拆解、工具调用和信息迭代整合链路；设计双智能体协作、差异化执行路径并统一接入专业工具。</div>
+              <div class="score-formula"><span>RESOURCE SCORE</span><div><b>30%</b> 集数完整度</div><div><b>25%</b> 当前可访问性</div><div><b>20%</b> 清晰度与字幕</div><div><b>15%</b> 来源可信度</div><div><b>10%</b> 信息新鲜度</div></div>
+              <div class="choice-grid" style="margin-top:14px"><div class="focus-card"><h3>URL / 标题去重</h3><p>同一平台不同落地页、同一网盘包的多次转载被归并到一个资源实体。</p></div><div class="focus-card"><h3>内容类型去重</h3><p>正片、海外剪辑版、剧情解说和小说资源分别归类，不互相混排。</p></div></div>
+              <div class="gate-grid"><div class="gate-card pass"><span>实体</span><strong>CONFIRMED</strong></div><div class="gate-card pass"><span>可用资源</span><strong>3 FOUND</strong></div><div class="gate-card pass"><span>完整资源</span><strong>76 / 76</strong></div><div class="gate-card pass"><span>限制</span><strong>LABELED</strong></div><div class="gate-card pass"><span>冲突</span><strong>RESOLVED</strong></div></div>
+              <div class="step-caption"><strong>停止原因：</strong>已找到三个可用来源，其中两个覆盖完整 76 集；主要访问限制和资源差异均已解释，继续搜索的边际收益低。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">06</span><div><h2>输出可以直接决策的资源卡片</h2><p>结果页保留来源、完整度、访问方式和限制，不再生成冗长报告。</p></div></header>
+            <div class="step-content">
+              <div class="resource-stack"><article class="resource-card recommended"><div class="resource-rank">01</div><div><span>百度网盘 · 当前账号可访问</span><h3>《后宫·甄嬛传》2011 · E01—E76</h3><p>76/76 · MP4 · 1080P 标记 · 内嵌字幕 · 目录连续 · 无异常文件</p><small>pan.baidu.com/s/1•••••••　提取码：••••</small></div><strong>94</strong></article><article class="resource-card"><div class="resource-rank">02</div><div><span>优酷 · 在线播放</span><h3>《甄嬛传》正片</h3><p>76 集全 · 中国大陆可访问 · 后段剧集存在 VIP 标识</p><small>页面状态已检查 · 2026-09-22</small></div><strong>89</strong></article><article class="resource-card"><div class="resource-rank">03</div><div><span>乐视官方 YouTube · 在线播放</span><h3>Empresses in the Palace</h3><p>官方频道 · 正片列表候选 · 可用性受所在地区影响</p><small>播放列表覆盖已验证</small></div><strong>82</strong></article></div>
+              <div class="result-strip" style="margin-top:16px"><div><span>搜索轮次</span><strong>3</strong></div><div><span>召回候选</span><strong>27</strong></div><div><span>有效资源</span><strong>3</strong></div><div><span>完整资源</span><strong>2</strong></div></div>
+              <div class="step-caption"><strong>演示边界：</strong>评分、网盘资源和检查结果均为静态示例；真实系统需要在请求时重新验证链接与文件状态。</div>
             </div>
           </article>
         </div>

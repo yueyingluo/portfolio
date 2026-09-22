@@ -11,58 +11,72 @@
   <div class="grain" aria-hidden="true"></div>
   <div class="demo-shell">
     <aside class="demo-sidebar">
-      <div class="brand"><span class="brand-mark">AE</span><div><strong>Agent Evolution</strong><small>PROMPT OPTIMIZATION WALKTHROUGH</small></div></div>
-      <nav aria-label="演示步骤"><button data-step-target>1. PM 配置目标</button><button data-step-target>2. 读取失败样本</button><button data-step-target>3. 双 Evaluator 归因</button><button data-step-target>4. 生成 Prompt 候选</button><button data-step-target>5. 回归准入</button></nav>
-      <div class="sidebar-run"><span>DEMO JOB</span><strong>EVO-240915-12</strong><small>脱敏案例 · 静态演示</small></div>
+      <div class="brand"><span class="brand-mark">AE</span><div><strong>Agent Evolution</strong><small>EVALUATE · ROUTE · OPTIMIZE</small></div></div>
+      <nav aria-label="演示步骤"><button data-step-target>1. PM 配置评测</button><button data-step-target>2. 遵循率根因路由</button><button data-step-target>3. 优化执行 Prompt</button><button data-step-target>4. 发现策略缺口</button><button data-step-target>5. 验证候选 Rubric</button><button data-step-target>6. 改写策略并准入</button></nav>
+      <div class="sidebar-run"><span>DEMO JOB</span><strong>EVO-240922-16</strong><small>静态案例 · 六步演示</small></div>
       <a class="back-link" href="index.html">← 返回研发作品集</a>
     </aside>
     <main class="demo-main">
-      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">AFTER-SALES AGENT / STEP-BY-STEP</p><h1>看 PM 的评测目标如何变成一次受控 Prompt 更新</h1></div><span class="status-pill">Dual Evaluator · Dual Reward</span></header>
-      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。案例和策略文本均为脱敏示意，不包含生产数据。</span></div>
+      <header class="demo-topbar"><div class="demo-title"><p class="app-kicker">AFTER-SALES AGENT / STEP-BY-STEP</p><h1>先判断 Agent 没执行好，还是策略本身不够好</h1></div><span class="status-pill">Adherence → Policy Gap</span></header>
+      <div class="static-banner"><b>STATIC DEMO</b><span>点击“下一步”推进。细分样本量与统计数值为示例批次；简历中的整体业务指标保持独立口径。</span></div>
 
       <section class="walkthrough" data-walkthrough>
-        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 05</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>EVO-240915-12</span></div>
+        <div class="walkthrough-progress"><span>STEP <b data-current-step>01</b> / 06</span><div class="progress-track"><i data-step-progress>&#8203;</i></div><span>EVO-240922-16</span></div>
         <div class="walkthrough-frame">
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">01</span><div><h2>PM 选择本轮关心的评测维度</h2><p>业务目标先被翻译成可执行的 Evaluator 与准入条件。</p></div></header>
+            <header class="step-heading"><span class="step-number">01</span><div><h2>PM 配置本轮策略遵循评测</h2><p>PM 定义“怎么看”和准入阈值，不需要直接修改 Agent Prompt。</p></div></header>
             <div class="step-content">
-              <div class="config-list"><div class="config-item"><span>策略是否覆盖“商品破损 + 已举证”场景</span><span class="toggle">&#8203;</span></div><div class="config-item"><span>Agent 是否完整执行举证核验 SOP</span><span class="toggle">&#8203;</span></div><div class="config-item"><span>赔付与流程是否满足业务护栏</span><span class="toggle">&#8203;</span></div></div>
-              <div class="step-caption"><strong>我搭建的入口：</strong>PM 不需要修改 Agent Prompt，只需配置关注维度、样本集和护栏，系统自动组织后续评测与优化。</div>
+              <div class="config-list"><div class="config-item"><span><b>推理一致性 · 30%</b><small>结论是否被订单、举证和上下文支持</small></span><span class="toggle">&#8203;</span></div><div class="config-item"><span><b>方案准确性 · 35%</b><small>处置动作是否匹配当前策略与场景</small></span><span class="toggle">&#8203;</span></div><div class="config-item"><span><b>话术合理性 · 20%</b><small>是否清晰、有同理心且没有越权承诺</small></span><span class="toggle">&#8203;</span></div><div class="config-item"><span><b>SOP 完整性 · 15%</b><small>核验、判断和告知节点是否完整执行</small></span><span class="toggle">&#8203;</span></div></div>
+              <div class="threshold-line"><span>策略遵循准入阈值</span><strong>0.80</strong><i><b style="width:80%">&#8203;</b></i><small>Demo 配置，不代表统一业务阈值</small></div>
+              <div class="step-caption"><strong>评测入口：</strong>PM 配置维度、权重、样本集和业务护栏，系统自动生成后续 Evaluator、路由与优化任务。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">02</span><div><h2>系统读取一个“没有解决用户问题”的样本</h2><p>对话、订单状态、Agent 方案和平台最终方案被组织为一条配对数据。</p></div></header>
+            <header class="step-heading"><span class="step-number">02</span><div><h2>直接用策略遵循率决定优化方向</h2><p>低遵循修执行；高遵循但问题仍未解决，才进入策略优化。</p></div></header>
             <div class="step-content">
-              <div class="case-card"><div class="case-line"><span>用户问题</span><strong>商品到货破损，已上传外包装与商品照片。</strong></div><div class="case-line"><span>当前 SOP</span><strong>核验举证 → 判断责任 → 选择策略 → 告知下一步。</strong></div><div class="case-line"><span>Agent 方案</span><strong>再次要求用户补充已经上传的商品照片。</strong></div><div class="case-line"><span>平台方案</span><strong>举证已满足，进入责任判断并说明处理时效。</strong></div></div>
-              <div class="step-caption">单看“最终没解决”还不知道该改什么：可能是策略根本不覆盖，也可能是 Agent 没执行好已有 SOP。下一步由双 Evaluator 分开判断。</div>
+              <div class="route-rule"><div><b>ADHERENCE &lt; 0.80</b><strong>Agent 没按现有策略执行</strong><span>→ 优化执行 Prompt</span></div><div><b>ADHERENCE ≥ 0.80</b><strong>用户问题仍未解决并溢出人工</strong><span>→ 诊断策略缺口</span></div><div><b>ADHERENCE ≥ 0.80</b><strong>用户问题已经解决</strong><span>→ 无需优化</span></div></div>
+              <div class="choice-grid" style="margin-top:16px"><div class="focus-card warning"><span class="score" style="color:var(--red)">0.40</span><h3>样本 A · 执行问题</h3><p>用户已提交破损举证，当前策略要求进入责任判断，但 Agent 再次要求上传照片。</p><small>策略足够，执行偏离 → PATH A</small></div><div class="focus-card emphasis"><span class="score">0.91</span><h3>样本 B · 策略问题</h3><p>Agent 严格执行“整单退货退款”，但用户问题未解决，最终溢出人工客服。</p><small>高遵循、低解决 → PATH B</small></div></div>
+              <div class="step-caption"><strong>人工方案定义：</strong>同一上下文下、没有新增关键证据和特殊权限的高质量人工解决轨迹；只有人工能在相同条件下解决，才说明策略空间可能不足。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">03</span><div><h2>双 Evaluator 把问题归因到“执行偏差”</h2><p>双 Reward 同时保留用户目标与业务护栏，避免只追一个分数。</p></div></header>
+            <header class="step-heading"><span class="step-number">03</span><div><h2>PATH A：把低遵循样本转成执行修复</h2><p>Evaluator 指出具体失败节点，受控更新引擎只修改被证据支持的规则。</p></div></header>
             <div class="step-content">
-              <div class="choice-grid"><div class="focus-card"><h3>策略有效性 Evaluator <span class="score">0.84</span></h3><p>当前策略已覆盖此场景，无需新增处置策略。</p></div><div class="focus-card warning"><h3>SOP 遵循 Evaluator <span class="score" style="color:var(--red)">0.31</span></h3><p>Agent 未读取已有举证状态，在核验步骤重复索取。</p></div></div>
-              <div class="simple-flow" style="margin-top:14px"><div class="flow-node"><b>USER REWARD</b>问题解决 0.38</div><span class="flow-arrow">+</span><div class="flow-node"><b>GUARDRAIL REWARD</b>流程合规 0.92</div><span class="flow-arrow">→</span><div class="flow-node active"><b>ROOT CAUSE</b>优化执行路径</div></div>
-              <div class="step-caption"><strong>关键设计：</strong>策略能力与 SOP 执行分别评估，满意度目标与赔付、流程护栏分别计分，更新方向因此可解释。</div>
+              <div class="metric-table"><div class="metric-row-head"><span>评测维度</span><span>得分</span><span>诊断</span></div><div><span>推理一致性</span><strong>2.1 / 5</strong><p>没有读取已有举证状态</p></div><div><span>方案准确性</span><strong>2.4 / 5</strong><p>错误回退到材料收集节点</p></div><div><span>话术合理性</span><strong>4.1 / 5</strong><p>表达正常，不是主要问题</p></div><div><span>SOP 完整性</span><strong>1.8 / 5</strong><p>责任判断节点没有执行</p></div></div>
+              <div class="prompt-diff" style="margin-top:14px"><div class="prompt-version"><span>CURRENT / v11</span><p>商品破损时，要求用户上传外包装与商品照片。</p></div><div class="prompt-version new"><span>CANDIDATE / v12 · ADD</span><p>执行举证节点前先读取已有材料；材料齐全时不得重复索取，直接进入责任判断。</p></div></div>
+              <div class="step-caption"><strong>受控更新：</strong>失败命令被组织成 Add / Delete / Replace 操作，候选 Prompt 不直接覆盖线上版本，必须先进入留出集回归。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">04</span><div><h2>受控更新引擎只修改被证据支持的规则</h2><p>失败反思产生 Add / Delete / Replace 操作，并限制编辑范围。</p></div></header>
+            <header class="step-heading"><span class="step-number">04</span><div><h2>PATH B：从 Agent—人工差异中发现策略缺口</h2><p>先按电商售后语义分桶，再在桶内聚类，避免把不同问题混成一个抽象主题。</p></div></header>
             <div class="step-content">
-              <div class="prompt-diff"><div class="prompt-version"><span>CURRENT / v11</span><p>若商品破损，要求用户上传外包装与商品照片；材料齐全后进入责任判断。</p></div><div class="prompt-version new"><span>CANDIDATE / v12 · ADD</span><p><strong>新增：</strong>先读取会话与订单中的举证状态；材料已存在时不得重复索取，直接进入下一 SOP 节点。</p></div></div>
-              <div class="simple-flow" style="margin-top:14px"><div class="flow-node"><b>ROLLOUT</b>收集失败轨迹</div><span class="flow-arrow">→</span><div class="flow-node"><b>REFLECT</b>聚合重复模式</div><span class="flow-arrow">→</span><div class="flow-node active"><b>BOUNDED EDIT</b>生成 v12</div></div>
-              <div class="step-caption">候选 Prompt 不会立刻覆盖当前版本。它必须先在留出集上证明目标指标提升且护栏无回退。</div>
+              <div class="pair-definition"><span>PAIRED SAMPLE</span><div><b>相同输入</b><p>同一用户问题、诉求、订单与举证上下文</p></div><i>+</i><div><b>Agent 方案</b><p>整单退货退款</p></div><i>VS</i><div><b>高质量人工方案</b><p>无需新增证据和特殊权限即可解决</p></div></div>
+              <div class="bucket-flow"><div><span>售后阶段</span><strong>已收货</strong></div><i>×</i><div><span>问题类型</span><strong>部分损坏</strong></div><i>×</i><div><span>证据状态</span><strong>举证充分</strong></div><i>×</i><div><span>核心诉求</span><strong>希望部分退款</strong></div></div>
+              <div class="rubric-proposals"><article><b>R1</b><span>部分损坏场景的比例化处置能力</span></article><article><b>R2</b><span>是否避免不必要的整单退货</span></article><article><b>R3</b><span>是否复用已有举证</span></article><article><b>R4</b><span>方案是否降低用户履约成本</span></article><article><b>R5</b><span>是否清晰解释方案依据</span></article></div>
+              <div class="step-caption"><strong>LLM Propose：</strong>模型读取同一聚类中的 Agent—人工对照轨迹，归纳人工能解决而当前策略无法覆盖的候选评价维度。</div>
             </div>
           </article>
 
           <article class="walk-step" data-walk-step>
-            <header class="step-heading"><span class="step-number">05</span><div><h2>留出集回归通过，Candidate v12 准入</h2><p>系统更新当前最佳版本，同时保留旧版本供审计与回滚。</p></div></header>
+            <header class="step-heading"><span class="step-number">05</span><div><h2>验证 Rubric 的区分度、稳定性与非冗余性</h2><p>候选维度不会因为由 LLM 提出就直接进入策略改写。</p></div></header>
             <div class="step-content">
-              <div class="gate-grid"><div class="gate-card pass"><span>策略有效性</span><strong>PASS</strong></div><div class="gate-card pass"><span>SOP 遵循</span><strong>+16 PP</strong></div><div class="gate-card pass"><span>赔付护栏</span><strong>NO REGRESSION</strong></div><div class="gate-card pass"><span>流程合规</span><strong>PASS</strong></div><div class="gate-card pass"><span>留出案例</span><strong>PASS</strong></div></div>
-              <div class="result-strip" style="margin-top:18px"><div><span>候选版本</span><strong>v12</strong></div><div><span>最终状态</span><strong style="color:var(--accent)">ACCEPTED</strong></div><div><span>SOP 遵循率</span><strong>77% → 93%</strong></div><div><span>策略覆盖率</span><strong>86% → 91%</strong></div></div>
-              <div class="step-caption"><strong>我的负责范围：</strong>数据构造、双 Evaluator、双 Reward、失败反思、Prompt 结构化修改、留出集门禁与离线评测全链路。</div>
+              <div class="validation-cards"><article><span>01 · DISCRIMINATION</span><h3>是否真实区分 Agent 与人工</h3><div><b>+1.26</b> 人工−Agent 差值</div><div><b>82%</b> 人工胜率</div><div><b>[1.02, 1.47]</b> Bootstrap 95% CI</div><small>Wilcoxon 配对检验通过</small></article><article><span>02 · STABILITY</span><h3>重复评分是否一致</h3><div><b>0.82</b> Krippendorff Alpha</div><div><b>0.21</b> 平均样本内标准差</div><div><b>0.76</b> 人工校准 Kappa</div><small>三次随机种子复评</small></article><article><span>03 · REDUNDANCY</span><h3>多个维度是否重复</h3><div><b>0.91</b> 文本相似度</div><div><b>0.87</b> 评分 Spearman 相关</div><div><b>MERGE</b> 合并建议</div><small>R2 + R4 → 处置成本合理性</small></article></div>
+              <div class="keep-row"><span>最终保留</span><b>比例化处置能力</b><b>处置成本合理性</b><b>已有举证复用能力</b></div>
+              <div class="step-caption"><strong>示例批次：</strong>统计数值用于展示评测方法；实际生产中阈值由标注校准、样本规模和业务风险共同确定。</div>
+            </div>
+          </article>
+
+          <article class="walk-step" data-walk-step>
+            <header class="step-heading"><span class="step-number">06</span><div><h2>根据有效维度改写策略，再经过留出集准入</h2><p>改写内容必须能追溯到聚类样本和通过验证的 Rubric。</p></div></header>
+            <div class="step-content">
+              <div class="prompt-diff"><div class="prompt-version"><span>CURRENT POLICY / v11</span><p>商品破损时，引导用户退货退款；材料齐全后进入责任判断。</p></div><div class="prompt-version new"><span>CANDIDATE POLICY / v12</span><p>部分损坏且举证充分时，复用已有材料并评估损坏范围；在权限内生成与损坏程度匹配的部分处理方案，责任争议或超过权限时升级人工，并说明方案依据与时效。</p></div></div>
+              <div class="evidence-note"><span>WHY THIS EDIT</span><p>来自 <strong>124</strong> 条“已收货 × 部分损坏 × 举证充分 × 希望部分退款”示例聚类；人工在“比例化处置能力”上平均高 <strong>1.26</strong> 分，该维度评分稳定且与其他保留维度不冗余。</p></div>
+              <div class="gate-grid"><div class="gate-card pass"><span>目标 Rubric</span><strong>IMPROVED</strong></div><div class="gate-card pass"><span>策略遵循</span><strong>NO REGRESSION</strong></div><div class="gate-card pass"><span>赔付护栏</span><strong>PASS</strong></div><div class="gate-card pass"><span>流程合规</span><strong>PASS</strong></div><div class="gate-card pass"><span>留出案例</span><strong>PASS</strong></div></div>
+              <div class="result-strip" style="margin-top:16px"><div><span>候选版本</span><strong>v12</strong></div><div><span>最终状态</span><strong style="color:var(--accent)">ACCEPTED</strong></div><div><span>整体 SOP 遵循率</span><strong>77% → 93%</strong></div><div><span>整体策略覆盖率</span><strong>86% → 91%</strong></div></div>
+              <div class="step-caption"><strong>闭环：</strong>只有目标维度提升且业务护栏无回退，Candidate 才替换当前版本；失败候选进入负反馈记录，用于下一轮受控更新。</div>
             </div>
           </article>
         </div>
